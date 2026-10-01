@@ -1,0 +1,23 @@
+.hero { display: grid; gap: 40px; align-items: center; }
+.eyebrow { font-size: .72rem; font-weight: 750; letter-spacing: .14em; color: var(--accent); margin: 0 0 20px; }
+.title { font-size: clamp(2.8rem, 6vw, 4.9rem); letter-spacing: -.055em; line-height: 1.06; max-width: 650px; margin: 0 0 24px; }
+.description { color: var(--muted); font-size: 1.05rem; line-height: 1.9; max-width: 600px; }
+.button { display: inline-flex; align-items: center; gap: 24px; margin-top: 18px; padding: 16px 22px; border-radius: 8px; background: var(--ink); color: white; text-decoration: none; font-weight: 650; }
+.button:hover { background: #254c57; }
+.note { color: var(--muted); font-size: .8rem; margin-top: 18px; }
+.dossier { position: relative; background: var(--surface); border: 1px solid var(--line); border-top: 5px solid var(--accent); border-radius: 4px 16px 16px 16px; padding: 28px; box-shadow: 8px 8px 0 #e5dfd2; }
+.sello { display: flex; align-items: center; gap: 12px; margin: 24px 0; color: var(--accent); }
+.sello span { display: grid; flex-shrink: 0; place-items: center; width: 4.75rem; height: 4.75rem; border: 2px solid var(--accent); border-radius: 50%; font: 2rem Georgia, serif; }
+.sello small { font-family: monospace; line-height: 1.6; letter-spacing: .14em; }
+.title { font-family: Georgia, 'Times New Roman', serif; font-weight: 500; }
+.dossier h2 { font-size: 1.6rem; letter-spacing: -.025em; margin: 0 0 24px; }
+.steps { list-style: none; padding: 0; margin: 0; }
+.steps li { display: flex; gap: 16px; padding: 20px 0; border-top: 1px solid var(--line); }
+.number { color: var(--accent); font-family: monospace; font-weight: 700; padding-top: 3px; }
+.number { flex-shrink: 0; white-space: nowrap; }
+.steps h3 { margin: 0 0 8px; font-size: 1rem; }
+.steps p { margin: 0; color: var(--muted); font-size: .9rem; line-height: 1.65; }
+.stage { max-width: 720px; }
+.stage h1 { font-size: clamp(2rem, 5vw, 3.5rem); letter-spacing: -.04em; }
+.notice { padding: 18px; background: #fffdf8; border: 1px solid var(--line); border-radius: 8px; line-height: 1.6; }
+@media (min-width: 900px) { .hero { grid-template-columns: 1.3fr 1fr; gap: 72px; padding-block: 32px; } .dossier { padding: 36px; } }

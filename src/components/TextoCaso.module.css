@@ -1,0 +1,8 @@
+.texto { padding: clamp(20px, 4vw, 40px); background: #fffdf8; border: 1px solid var(--line); border-radius: 12px; overflow-wrap: anywhere; }
+.texto h2 { font-size: clamp(1.5rem, 4vw, 2rem); line-height: 1.4; margin-top: 0; }
+.creditos { font-size: .9rem; line-height: 1.7; color: var(--muted); }
+.creditos dt { font-weight: 700; }
+.creditos dd { margin: 0 0 12px; }
+.contenido { max-width: 68ch; margin: 24px auto; font-size: 1.125rem; line-height: 1.9; }
+.contenido p { margin: 0 0 1.4em; }
+.licencia { font-size: .85rem; line-height: 1.7; color: var(--muted); border-top: 1px solid var(--line); padding-top: 16px; }

@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="es">
+  <head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Prueba local de SCORM 1.2 · Detectives del Texto</title></head>
+  <body>
+    <a href="#contenido">Saltar al contenido</a>
+    <main id="contenido" tabindex="-1">
+    <h1>Simulador local SCORM 1.2</h1>
+    <p>El juego se abre dentro de un iframe y encuentra window.API en esta ventana padre. Los datos de prueba se guardan separados del modo web.</p>
+    <button id="reiniciar" type="button">Borrar sesión de prueba y recargar</button>
+    <h2>Valores guardados</h2><pre id="valores" tabindex="0" role="region" aria-label="Valores guardados" aria-live="polite"></pre>
+    <h2>Llamadas a la API</h2><pre id="llamadas" tabindex="0" role="region" aria-label="Llamadas a la API"></pre>
+    <h2>Recurso educativo</h2><div id="recurso"></div>
+    </main>
+    <script type="module" src="/src/scorm/lmsDemo.js"></script>
+  </body>
+</html>

@@ -1,0 +1,2 @@
+.marcador { display: flex; align-items: center; gap: 12px; padding: 20px; background: var(--ink); color: white; border-radius: 12px; line-height: 1.6; }
+.marcador strong { font-size: 1.4rem; font-variant-numeric: tabular-nums; }

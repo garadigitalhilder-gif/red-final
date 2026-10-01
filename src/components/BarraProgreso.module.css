@@ -1,0 +1,5 @@
+.barras { display: grid; gap: 20px; padding: 20px; background: #fffdf8; border: 1px solid var(--line); border-radius: 12px; }
+.avance label { font-weight: 700; }
+.avance p { margin: 8px 0; font-variant-numeric: tabular-nums; }
+.avance progress { display: block; width: 100%; height: 16px; accent-color: var(--ink); }
+@media (min-width: 650px) { .barras { grid-template-columns: 1fr 1fr; } }

@@ -1,0 +1,165 @@
+{
+  "interfaz": {
+    "nombre": "Detectives del Texto",
+    "nivel": "Lengua Castellana · Grado 11",
+    "inicio": "Inicio",
+    "saltar": "Saltar al contenido",
+    "pie": "Lee con atención. Encuentra evidencias. Construye tu postura."
+  },
+  "inicio": {
+    "etiqueta": "AGENCIA DE LECTURA CRÍTICA",
+    "titulo": "Todo texto esconde pistas.",
+    "descripcion": "Conviértete en detective: examina las ideas, cuestiona los argumentos y descubre lo que hay detrás de las palabras.",
+    "accion": "Comenzar caso",
+    "nota": "Un juego de misterio para practicar la lectura crítica.",
+    "expediente": "TU PRÓXIMA MISIÓN",
+    "mision": "Investigar antes de creer",
+    "pasos": [
+      {
+        "titulo": "Lee las evidencias",
+        "descripcion": "Identifica la idea principal, la tesis y los argumentos."
+      },
+      {
+        "titulo": "Conecta las pistas",
+        "descripcion": "Infiere la intención del autor y examina posibles falacias."
+      },
+      {
+        "titulo": "Emite tu veredicto",
+        "descripcion": "Construye una postura propia respaldada por el texto."
+      }
+    ]
+  },
+  "etapas": {
+    "briefing": {
+      "titulo": "Briefing de la misión",
+      "descripcion": "Aquí encontrarás las instrucciones y el contexto de tu investigación.",
+      "accion": "Abrir expediente",
+      "destino": "/caso/1"
+    },
+    "caso": {
+      "titulo": "Expediente",
+      "descripcion": "Este espacio presentará el texto, las preguntas y las pistas del caso.",
+      "accion": "Ir al veredicto",
+      "destino": "/veredicto"
+    },
+    "veredicto": {
+      "titulo": "Tu veredicto",
+      "descripcion": "Aquí podrás justificar tu postura con evidencias del texto.",
+      "accion": "Ver resultados",
+      "destino": "/resultados"
+    },
+    "resultados": {
+      "titulo": "Resultados de la investigación",
+      "descripcion": "Aquí revisarás tu desempeño y la retroalimentación de cada reto.",
+      "accion": "Volver al inicio",
+      "destino": "/"
+    },
+    "noEncontrada": {
+      "titulo": "Ruta no encontrada",
+      "descripcion": "Esta dirección no corresponde a un expediente.",
+      "accion": "Volver al inicio",
+      "destino": "/"
+    }
+  },
+  "estadoBase": "Pantalla en preparación. Esta versión incluye la estructura de navegación.",
+  "componentes": {
+    "comprobar": "Comprobar respuesta",
+    "respuestaRegistrada": "Respuesta registrada",
+    "seleccionaRespuesta": "Selecciona una opción antes de comprobar.",
+    "escribeRespuesta": "Escribe tu respuesta antes de enviarla.",
+    "tuRespuesta": "Tu respuesta",
+    "correcta": "✓ Respuesta correcta",
+    "incorrecta": "✕ Respuesta incorrecta",
+    "pendiente": "Respuesta recibida: pendiente de valoración",
+    "revisionAbierta": "Esta respuesta requiere una valoración con rúbrica. Aún no se han asignado puntos.",
+    "puntosObtenidos": "Puntos obtenidos",
+    "autoevaluacionRegistrada": "✓ Autoevaluación registrada",
+    "rubrica": "Autoevalúa tu postura",
+    "reglaRubrica": "Valora cada criterio con honestidad. Los puntos corresponden a tu autoevaluación; no son una calificación automática de la calidad del texto.",
+    "cumple": "Sí, lo cumplo",
+    "noCumple": "Todavía no",
+    "faltaRubrica": "Valora todos los criterios antes de registrar tu respuesta.",
+    "rangoPalabras": "Escribe una respuesta dentro del rango de palabras indicado.",
+    "palabras": "palabras",
+    "puntos": "puntos",
+    "pista": "Ayuda para la investigación",
+    "revelarPista": "Revelar pista",
+    "pistaRevelada": "Pista revelada",
+    "descuento": "Descuento registrado",
+    "costoPista": 5,
+    "progreso": "Progreso de la investigación",
+    "progresoCaso": "Preguntas respondidas del caso",
+    "progresoJuego": "Preguntas respondidas del juego disponible",
+    "puntajeTotal": "Puntaje total",
+    "autor": "Autor",
+    "fuente": "Fuente",
+    "licencia": "Licencia y procedencia",
+    "retos": "Retos de la investigación",
+    "reglas": "Cada respuesta se registra una sola vez. Cada pista cuesta 5 puntos y se cobra una sola vez, incluso si la consultas antes de ganar puntos. El marcador nunca muestra un puntaje negativo. El progreso del juego incluye únicamente los casos con preguntas disponibles.",
+    "casoPendiente": "Este caso todavía no tiene contenido disponible.",
+    "insignias": {
+      "aprendiz": { "nombre": "Aprendiz", "icono": "✦", "descripcion": "Has terminado un nivel de dificultad básica." },
+      "detective": { "nombre": "Detective", "icono": "⌕", "descripcion": "Has terminado un nivel de dificultad intermedia." },
+      "inspector": { "nombre": "Inspector", "icono": "★", "descripcion": "Has terminado un nivel de dificultad avanzada." },
+      "maestro": { "nombre": "Maestro del Veredicto", "icono": "♜", "descripcion": "Has terminado el veredicto final." }
+    }
+  },
+  "juego": {
+    "finalizarSesion": "Guardar y finalizar sesión",
+    "sesionCerrada": "Sesión guardada y finalizada.",
+    "avisoSesion": "Para seguir enviando cambios al aula virtual, vuelve a abrir el recurso desde ella.",
+    "falloLms": "El aula virtual no pudo guardar todos los cambios. Tu progreso también se guarda en este navegador cuando está disponible.",
+    "volver": "← Volver",
+    "menuNiveles": "Menú de niveles",
+    "agencia": "Agencia",
+    "informe": "Informe final",
+    "instrucciones": "Protocolo de investigación",
+    "diagnostico": "Antes de investigar",
+    "diagnosticoNota": "Dos preguntas para reconocer tu punto de partida. No suman ni restan puntos del juego.",
+    "diagnosticoFin": "Diagnóstico completado. Revisa la retroalimentación y comienza tu investigación.",
+    "veredictoNota": "Esta reflexión se guarda con tu expediente. En los casos 1–3 no modifica el puntaje; en el caso 4 forma parte de las cinco preguntas y aporta hasta 20 puntos.",
+    "redactar": "Redacta tu veredicto",
+    "pendienteVeredicto": "Revisa la evidencia y registra tu postura con la rúbrica para continuar.",
+    "feedbackFinal": "Balance de la investigación",
+    "evidencias": "Texto de referencia",
+    "investigacion": "Cuaderno de investigación",
+    "casosCerrados": "Expedientes terminados",
+    "ruta": "Tu ruta de investigación",
+    "antes": "01 · Preparación",
+    "durante": "02 · Investigación",
+    "despues": "03 · Veredicto",
+    "nivel": "Nivel",
+    "regla": "Termina todas las preguntas y consigue al menos el 70% del puntaje máximo del caso, después del descuento de pistas, para desbloquear el siguiente. La insignia se entrega al terminar el nivel, aunque debas reintentarlo para avanzar.",
+    "sinGuardado": "El navegador no permite guardar el progreso. Puedes jugar, pero el avance se conserva solo mientras esta aplicación permanezca abierta.",
+    "expedientes": "Expedientes",
+    "caso": "Caso",
+    "bloqueado": "Bloqueado",
+    "disponible": "Disponible",
+    "pendiente": "Contenido en preparación",
+    "completado": "Terminado",
+    "aprobado": "✓ Meta del 70% alcanzada",
+    "noAprobado": "Meta del 70% pendiente",
+    "continuar": "Continuar investigación",
+    "sinTerminar": "Termina las preguntas del caso actual para consultar su veredicto. Las respuestas abiertas pendientes de valoración no completan el nivel.",
+    "volverCaso": "Volver al caso",
+    "siguiente": "Abrir siguiente caso",
+    "siguientePendiente": "El siguiente caso está desbloqueado, pero su contenido aún está en preparación.",
+    "sinSiguiente": "Has llegado al último caso del catálogo.",
+    "puntosCaso": "Puntaje del caso",
+    "porcentaje": "Porcentaje",
+    "descuentos": "Descuento por pistas",
+    "reintentar": "Reintentar este caso",
+    "avisoReintento": "Reintentar borra las respuestas, pistas e insignias de este caso y de los posteriores.",
+    "reiniciar": "Reiniciar el juego",
+    "avisoReinicio": "Reiniciar borra todo el avance y las insignias guardadas.",
+    "insignias": "Insignias ganadas",
+    "sinInsignias": "Termina un nivel para ganar tu primera insignia.",
+    "estado": "Estado",
+    "puntaje": "Puntaje",
+    "respuestas": "Respuestas registradas",
+    "sinRespuesta": "Sin responder",
+    "sinContenido": "—",
+    "verResultados": "Ver resultados",
+    "elegir": "Elegir expediente"
+  }
+}

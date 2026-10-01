@@ -1,0 +1,162 @@
+{
+    "id":  1,
+    "titulo":  "El rastro de las ideas",
+    "nivel":  "Grado 11",
+    "dificultad":  "básica",
+    "objetivo":  "Distinguir el tema de la idea principal e identificar el tipo de texto a partir de su organización y propósito.",
+    "texto":  {
+                  "titulo":  "Una biblioteca que también presta semillas",
+                  "autor":  "OpenAI, texto generado para Detectives del Texto",
+                  "fuente":  "Texto original redactado para este recurso. Situación ficticia con fines educativos.",
+                  "licencia":  "Texto original generado por IA para este recurso; no es una reproducción de una obra de terceros.",
+                  "contenido":  "En el barrio Las Acacias, una biblioteca comunitaria ofrece algo más que libros: también presta semillas. Las personas reciben pequeños sobres de fríjol, tomate o albahaca y una ficha con instrucciones para sembrarlos. Después de la cosecha, pueden devolver una parte de las semillas obtenidas para que otras personas las utilicen. No se cobra dinero ni se exige que todas las plantas sobrevivan.\n\nEl intercambio incluye encuentros mensuales. Allí, quienes cultivan cuentan qué les funcionó y qué dificultades tuvieron. Una vecina explica cómo aprovechar un recipiente usado como matera; otro participante muestra cómo reconocer una planta que necesita agua. La biblioteca guarda estas experiencias en un cuaderno que cualquiera puede consultar.\n\nAsí, el préstamo de semillas permite compartir tanto materiales para cultivar como conocimientos entre vecinos. Los sobres cambian de manos y las experiencias quedan disponibles para nuevos participantes. La iniciativa reúne el cultivo en casa y el aprendizaje comunitario en un mismo espacio."
+              },
+    "preguntas":  [
+                      {
+                          "id":  "c1-p1",
+                          "enunciado":  "¿Cuál es el tema general del texto?",
+                          "tipo":  "opcion-multiple",
+                          "opciones":  [
+                                           {
+                                               "id":  "a",
+                                               "texto":  "El intercambio de semillas y saberes en una biblioteca comunitaria."
+                                           },
+                                           {
+                                               "id":  "b",
+                                               "texto":  "La venta de alimentos en el barrio Las Acacias."
+                                           },
+                                           {
+                                               "id":  "c",
+                                               "texto":  "La historia de las bibliotecas del país."
+                                           },
+                                           {
+                                               "id":  "d",
+                                               "texto":  "Las enfermedades de las plantas de tomate."
+                                           }
+                                       ],
+                          "respuestaCorrecta":  "a",
+                          "retroalimentacionCorrecta":  "El tema es el asunto que recorre el texto: una biblioteca donde se intercambian semillas y conocimientos de cultivo.",
+                          "retroalimentacionIncorrecta":  "Busca el asunto presente en los tres párrafos. La venta, la historia de las bibliotecas y las enfermedades de las plantas no se desarrollan en el texto.",
+                          "pista":  "Observa qué actividad se presenta al inicio y cómo se amplía en los siguientes párrafos.",
+                          "puntos":  20
+                      },
+                      {
+                          "id":  "c1-p2",
+                          "enunciado":  "¿Qué afirmación expresa mejor la idea principal del texto completo?",
+                          "tipo":  "opcion-multiple",
+                          "opciones":  [
+                                           {
+                                               "id":  "a",
+                                               "texto":  "Un recipiente usado puede convertirse en una matera."
+                                           },
+                                           {
+                                               "id":  "b",
+                                               "texto":  "Todas las personas deben devolver la misma cantidad de semillas."
+                                           },
+                                           {
+                                               "id":  "c",
+                                               "texto":  "El préstamo de semillas de la biblioteca permite compartir materiales y aprender entre vecinos."
+                                           },
+                                           {
+                                               "id":  "d",
+                                               "texto":  "El objetivo de la biblioteca es reemplazar los libros por semillas."
+                                           }
+                                       ],
+                          "respuestaCorrecta":  "c",
+                          "retroalimentacionCorrecta":  "Esta afirmación integra el préstamo de semillas del primer párrafo y el intercambio de conocimientos del segundo, como sintetiza el cierre.",
+                          "retroalimentacionIncorrecta":  "Una idea principal abarca el texto completo. La matera es un ejemplo; la devolución obligatoria y el reemplazo de libros no aparecen en el texto.",
+                          "pista":  "Busca una afirmación que reúna lo que se comparte y lo que se aprende.",
+                          "puntos":  20
+                      },
+                      {
+                          "id":  "c1-p3",
+                          "enunciado":  "El ejemplo del recipiente usado como matera es la idea principal de todo el texto.",
+                          "tipo":  "verdadero-falso",
+                          "opciones":  [
+                                           {
+                                               "id":  "verdadero",
+                                               "texto":  "Verdadero"
+                                           },
+                                           {
+                                               "id":  "falso",
+                                               "texto":  "Falso"
+                                           }
+                                       ],
+                          "respuestaCorrecta":  "falso",
+                          "retroalimentacionCorrecta":  "El recipiente es una idea secundaria: ejemplifica los saberes que se comparten en los encuentros, pero no resume toda la iniciativa.",
+                          "retroalimentacionIncorrecta":  "Ese detalle aparece solo como ejemplo en el segundo párrafo. La idea principal debe incluir el intercambio de semillas y el aprendizaje entre vecinos.",
+                          "pista":  "Pregúntate si ese ejemplo explica también el primer párrafo y la conclusión.",
+                          "puntos":  20
+                      },
+                      {
+                          "id":  "c1-p4",
+                          "enunciado":  "¿Qué tipo de texto predomina en este escrito?",
+                          "tipo":  "opcion-multiple",
+                          "opciones":  [
+                                           {
+                                               "id":  "a",
+                                               "texto":  "Narrativo: cuenta una aventura con conflicto y desenlace."
+                                           },
+                                           {
+                                               "id":  "b",
+                                               "texto":  "Expositivo: informa y explica cómo funciona una iniciativa."
+                                           },
+                                           {
+                                               "id":  "c",
+                                               "texto":  "Instructivo: presenta una secuencia de pasos para sembrar tomate."
+                                           },
+                                           {
+                                               "id":  "d",
+                                               "texto":  "Argumentativo: defiende una tesis frente a una postura contraria."
+                                           }
+                                       ],
+                          "respuestaCorrecta":  "b",
+                          "retroalimentacionCorrecta":  "Predomina la exposición: el texto explica el préstamo, los encuentros y la función del cuaderno de experiencias.",
+                          "retroalimentacionIncorrecta":  "Aunque menciona instrucciones de siembra, no las desarrolla. Tampoco organiza una aventura ni una discusión de posturas: su propósito principal es explicar la iniciativa.",
+                          "pista":  "Distingue entre mencionar una ficha de instrucciones y dar instrucciones al lector.",
+                          "puntos":  20
+                      },
+                      {
+                          "id":  "c1-p5",
+                          "enunciado":  "¿Qué relación hay entre el último párrafo y los dos anteriores?",
+                          "tipo":  "opcion-multiple",
+                          "opciones":  [
+                                           {
+                                               "id":  "a",
+                                               "texto":  "Introduce un tema distinto: la compra de libros."
+                                           },
+                                           {
+                                               "id":  "b",
+                                               "texto":  "Niega que los vecinos compartan conocimientos."
+                                           },
+                                           {
+                                               "id":  "c",
+                                               "texto":  "Presenta instrucciones detalladas para cosechar."
+                                           },
+                                           {
+                                               "id":  "d",
+                                               "texto":  "Sintetiza la idea principal al reunir el intercambio de semillas y el aprendizaje comunitario."
+                                           }
+                                       ],
+                          "respuestaCorrecta":  "d",
+                          "retroalimentacionCorrecta":  "El cierre integra las dos actividades explicadas antes y hace explícita la idea principal: compartir materiales y conocimientos.",
+                          "retroalimentacionIncorrecta":  "El último párrafo retoma lo anterior con la palabra «Así». No cambia de tema ni da pasos de cultivo: reúne las ideas del préstamo y los encuentros.",
+                          "pista":  "Relaciona «materiales para cultivar» con el primer párrafo y «conocimientos» con el segundo.",
+                          "puntos":  20
+                      }
+                  ],
+    "pistas":  [
+                   {
+                       "id":  "c1-pista1",
+                       "contenido":  "El tema nombra el asunto del texto; la idea principal expresa qué se dice de ese asunto."
+                   },
+                   {
+                       "id":  "c1-pista2",
+                       "contenido":  "Los ejemplos apoyan una idea más amplia. Comprueba si una opción resume todos los párrafos o solo un detalle."
+                   },
+                   {
+                       "id":  "c1-pista3",
+                       "contenido":  "Para reconocer el tipo de texto, observa su propósito y organización: explicar, narrar, dar instrucciones o defender una postura."
+                   }
+               ]
+}

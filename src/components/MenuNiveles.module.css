@@ -1,0 +1,13 @@
+.menu { border-block: 1px solid var(--line); background: var(--surface); }
+.menu ol { list-style: none; padding: 0; margin: 0 auto; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 1280px; }
+.menu li { min-width: 0; }
+.numero { flex-shrink: 0; white-space: nowrap; }
+.menu a > span:last-child, .bloqueado > span:last-child { min-width: 0; }
+.menu a, .bloqueado { display: flex; gap: 10px; align-items: center; padding: 16px; height: 100%; color: var(--ink); text-decoration: none; border-bottom: 3px solid transparent; }
+.menu a:hover { background: #f2eadc; }
+.menu a[aria-current="page"] { border-bottom-color: var(--accent); background: #f2eadc; }
+.menu strong { display: block; font-size: .8rem; line-height: 1.5; }
+.menu small { display: block; color: var(--muted); margin-top: 4px; font-size: .75rem; }
+.numero { font-family: Georgia, serif; font-size: 1.4rem; color: var(--accent); }
+.bloqueado { background: #efeee9; }
+@media (min-width: 900px) { .menu ol { grid-template-columns: repeat(4, minmax(0, 1fr)); } }

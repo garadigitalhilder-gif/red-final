@@ -1,0 +1,5 @@
+.insignia { display: flex; align-items: center; gap: 16px; padding: 20px; border: 1px solid var(--line); border-radius: 12px; background: #fffdf8; }
+.icono { font-size: 2rem; flex-shrink: 0; }
+.insignia h2, .insignia h3 { margin: 0 0 8px; font-size: 1.1rem; }
+.insignia > div { min-width: 0; }
+.insignia p { margin: 0; line-height: 1.6; color: var(--muted); }

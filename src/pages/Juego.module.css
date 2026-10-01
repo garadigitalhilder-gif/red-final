@@ -1,0 +1,25 @@
+.pagina { display: grid; gap: 20px; max-width: 900px; margin: auto; line-height: 1.7; }
+.encabezado { border-bottom: 1px solid var(--line); padding-bottom: 24px; }
+.etiqueta { color: var(--accent); text-transform: uppercase; font-size: .8rem; letter-spacing: .12em; font-weight: 700; }
+.panel { padding: clamp(20px, 4vw, 32px); background: var(--surface); border: 1px solid var(--line); border-radius: 12px; display: grid; gap: 16px; }
+.instrucciones { padding-left: 24px; margin: 0; }
+.instrucciones li { padding-left: 8px; margin-bottom: 20px; }
+.instrucciones h3 { margin-bottom: 6px; }
+.diagnostico { display: grid; gap: 20px; margin-top: 8px; }
+.referencia { border: 1px solid var(--line); border-radius: 12px; background: var(--surface); }
+.referencia summary { font-weight: 700; }
+.veredicto { display: grid; gap: 24px; align-items: start; }
+.veredicto h2 { margin-bottom: 16px; }
+.pagina h1 { font-size: clamp(2rem, 5vw, 3rem); line-height: 1.2; }
+.pagina h2, .pagina p { margin: 0; }
+.pagina dd { margin: 0 0 12px; }
+.pagina dt { font-weight: 700; }
+.lista { list-style: none; display: grid; gap: 20px; padding: 0; margin: 0; }
+.lista li { background: #fffdf8; border: 1px solid var(--line); border-radius: 12px; padding: 20px; }
+.lista h3 { margin-top: 0; }
+.accion, .boton { display: inline-block; justify-self: start; padding: 14px 18px; margin-top: 12px; border: 0; border-radius: 8px; background: var(--ink); color: white; font: inherit; text-decoration: none; cursor: pointer; min-height: 48px; }
+.estado { font-weight: 700; padding: 16px; border: 2px solid var(--ink); border-radius: 8px; }
+.tabla { overflow-x: auto; }
+.tabla table { border-collapse: collapse; width: 100%; }
+.tabla caption { text-align: left; font-weight: 700; padding-bottom: 12px; }
+.tabla td, .tabla th { text-align: left; padding: 14px; border-bottom: 1px solid #84918e; }

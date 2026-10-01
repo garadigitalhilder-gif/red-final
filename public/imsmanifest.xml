@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest identifier="DETECTIVES_TEXTO_GRADO11_V1" version="1.0"
+  xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2"
+  xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2"
+  xmlns:imsmd="http://www.imsglobal.org/xsd/imsmd_rootv1p2p1">
+  <metadata>
+    <schema>ADL SCORM</schema>
+    <schemaversion>1.2</schemaversion>
+    <!-- Metadatos LOM con la vinculación IMS Metadata 1.2.1 utilizada en SCORM 1.2. -->
+    <imsmd:lom>
+      <imsmd:general>
+        <imsmd:identifier>urn:detectives-del-texto:grado-11:v1</imsmd:identifier>
+        <imsmd:title>
+          <imsmd:langstring xml:lang="es">Detectives del Texto: casos de lectura crítica</imsmd:langstring>
+        </imsmd:title>
+        <imsmd:language>es</imsmd:language>
+        <imsmd:description>
+          <imsmd:langstring xml:lang="es">Recurso educativo digital de misterio para estudiantes de grado 11 en Colombia. Cuatro casos con textos, preguntas, pistas y rúbricas fortalecen la lectura crítica y la construcción de una postura propia.</imsmd:langstring>
+        </imsmd:description>
+        <imsmd:keyword><imsmd:langstring xml:lang="es">Lengua Castellana</imsmd:langstring></imsmd:keyword>
+        <imsmd:keyword><imsmd:langstring xml:lang="es">lectura crítica</imsmd:langstring></imsmd:keyword>
+        <imsmd:keyword><imsmd:langstring xml:lang="es">idea principal</imsmd:langstring></imsmd:keyword>
+        <imsmd:keyword><imsmd:langstring xml:lang="es">tesis y argumentos</imsmd:langstring></imsmd:keyword>
+        <imsmd:keyword><imsmd:langstring xml:lang="es">intención del autor</imsmd:langstring></imsmd:keyword>
+        <imsmd:keyword><imsmd:langstring xml:lang="es">inferencias y falacias</imsmd:langstring></imsmd:keyword>
+        <imsmd:keyword><imsmd:langstring xml:lang="es">postura propia</imsmd:langstring></imsmd:keyword>
+        <imsmd:keyword><imsmd:langstring xml:lang="es">Saber 11</imsmd:langstring></imsmd:keyword>
+        <imsmd:coverage><imsmd:langstring xml:lang="es">Colombia; educación media; grado 11.</imsmd:langstring></imsmd:coverage>
+      </imsmd:general>
+      <imsmd:lifecycle>
+        <imsmd:version><imsmd:langstring xml:lang="x-none">1.0</imsmd:langstring></imsmd:version>
+        <imsmd:contribute>
+          <imsmd:role>
+            <imsmd:source><imsmd:langstring xml:lang="x-none">LOMv1.0</imsmd:langstring></imsmd:source>
+            <imsmd:value><imsmd:langstring xml:lang="x-none">Author</imsmd:langstring></imsmd:value>
+          </imsmd:role>
+          <imsmd:centity><imsmd:vcard>BEGIN:VCARD
+VERSION:3.0
+FN:[COMPLETAR] — nombres de los integrantes del grupo
+ORG:[COMPLETAR] — nombre del grupo
+END:VCARD</imsmd:vcard></imsmd:centity>
+          <imsmd:date><imsmd:datetime>2026-10-01</imsmd:datetime></imsmd:date>
+        </imsmd:contribute>
+        <imsmd:contribute>
+          <imsmd:role>
+            <imsmd:source><imsmd:langstring xml:lang="x-none">LOMv1.0</imsmd:langstring></imsmd:source>
+            <imsmd:value><imsmd:langstring xml:lang="x-none">Publisher</imsmd:langstring></imsmd:value>
+          </imsmd:role>
+          <imsmd:centity><imsmd:vcard>BEGIN:VCARD
+VERSION:3.0
+FN:[COMPLETAR] — nombre del grupo y de la institución educativa
+END:VCARD</imsmd:vcard></imsmd:centity>
+        </imsmd:contribute>
+      </imsmd:lifecycle>
+      <imsmd:technical>
+        <imsmd:format>text/html</imsmd:format>
+        <imsmd:location>index.html</imsmd:location>
+      </imsmd:technical>
+      <imsmd:educational>
+        <imsmd:interactivitytype>
+          <imsmd:source><imsmd:langstring xml:lang="x-none">LOMv1.0</imsmd:langstring></imsmd:source>
+          <imsmd:value><imsmd:langstring xml:lang="x-none">Active</imsmd:langstring></imsmd:value>
+        </imsmd:interactivitytype>
+        <imsmd:learningresourcetype>
+          <imsmd:source><imsmd:langstring xml:lang="x-none">LOMv1.0</imsmd:langstring></imsmd:source>
+          <imsmd:value><imsmd:langstring xml:lang="x-none">Exercise</imsmd:langstring></imsmd:value>
+        </imsmd:learningresourcetype>
+        <imsmd:interactivitylevel>
+          <imsmd:source><imsmd:langstring xml:lang="x-none">LOMv1.0</imsmd:langstring></imsmd:source>
+          <imsmd:value><imsmd:langstring xml:lang="x-none">high</imsmd:langstring></imsmd:value>
+        </imsmd:interactivitylevel>
+        <imsmd:intendedenduserrole>
+          <imsmd:source><imsmd:langstring xml:lang="x-none">LOMv1.0</imsmd:langstring></imsmd:source>
+          <imsmd:value><imsmd:langstring xml:lang="x-none">Learner</imsmd:langstring></imsmd:value>
+        </imsmd:intendedenduserrole>
+        <imsmd:context>
+          <imsmd:source><imsmd:langstring xml:lang="x-none">LOMv1.0</imsmd:langstring></imsmd:source>
+          <imsmd:value><imsmd:langstring xml:lang="x-none">Secondary Education</imsmd:langstring></imsmd:value>
+        </imsmd:context>
+        <imsmd:typicalagerange><imsmd:langstring xml:lang="x-none">16-18</imsmd:langstring></imsmd:typicalagerange>
+        <imsmd:difficulty>
+          <imsmd:source><imsmd:langstring xml:lang="x-none">LOMv1.0</imsmd:langstring></imsmd:source>
+          <imsmd:value><imsmd:langstring xml:lang="x-none">medium</imsmd:langstring></imsmd:value>
+        </imsmd:difficulty>
+        <imsmd:typicallearningtime>
+          <imsmd:datetime>PT2H</imsmd:datetime>
+          <imsmd:description><imsmd:langstring xml:lang="es">2 horas para recorrer los cuatro casos.</imsmd:langstring></imsmd:description>
+        </imsmd:typicallearningtime>
+        <imsmd:description>
+          <imsmd:langstring xml:lang="es">Educación media, grado 11, Colombia. Destinatario: estudiante de 16 a 18 años. Dificultad media e interactividad activa. Lectura de textos, resolución de preguntas y autoevaluación de una postura propia mediante rúbrica, en relación con las competencias de lectura crítica de Saber 11.</imsmd:langstring>
+        </imsmd:description>
+        <imsmd:language>es</imsmd:language>
+      </imsmd:educational>
+      <imsmd:rights>
+        <imsmd:cost>
+          <imsmd:source><imsmd:langstring xml:lang="x-none">LOMv1.0</imsmd:langstring></imsmd:source>
+          <imsmd:value><imsmd:langstring xml:lang="x-none">no</imsmd:langstring></imsmd:value>
+        </imsmd:cost>
+        <imsmd:copyrightandotherrestrictions>
+          <imsmd:source><imsmd:langstring xml:lang="x-none">LOMv1.0</imsmd:langstring></imsmd:source>
+          <imsmd:value><imsmd:langstring xml:lang="x-none">yes</imsmd:langstring></imsmd:value>
+        </imsmd:copyrightandotherrestrictions>
+        <imsmd:description>
+          <imsmd:langstring xml:lang="es">Autoría del grupo [COMPLETAR]. Los textos de los casos indican CC BY-NC-SA 4.0; consulte la licencia de cada contenido en src/data/casos.json. Las dependencias conservan sus licencias originales.</imsmd:langstring>
+        </imsmd:description>
+      </imsmd:rights>
+    </imsmd:lom>
+  </metadata>
+  <organizations default="ORG_DETECTIVES">
+    <organization identifier="ORG_DETECTIVES" structure="hierarchical">
+      <title>Detectives del Texto — Lengua Castellana, grado 11</title>
+      <item identifier="ITEM_DETECTIVES" identifierref="RES_DETECTIVES" isvisible="true">
+        <title>Investigar, interpretar y emitir un veredicto</title>
+        <adlcp:masteryscore>70</adlcp:masteryscore>
+      </item>
+    </organization>
+  </organizations>
+  <resources>
+    <resource identifier="RES_DETECTIVES" type="webcontent" adlcp:scormtype="sco" href="index.html">
+      <file href="index.html" />
+      <!-- ARCHIVOS_GENERADOS -->
+    </resource>
+  </resources>
+</manifest>

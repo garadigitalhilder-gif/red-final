@@ -1,0 +1,12 @@
+.caso { display: grid; gap: 24px; margin: auto; }
+.investigacion { display: grid; gap: 28px; align-items: start; }
+.lectura { min-width: 0; }
+.investigacion section { min-width: 0; }
+.investigacion h2 { margin-top: 0; }
+.etiqueta { color: var(--accent); font-size: .8rem; font-weight: 700; letter-spacing: .08em; }
+.caso h1 { font-size: clamp(2rem, 5vw, 3rem); letter-spacing: -.04em; }
+.objetivo, .reglas { line-height: 1.8; color: var(--muted); }
+.resumen { display: grid; gap: 16px; }
+.continuar { display: inline-block; justify-self: start; padding: 16px 20px; border-radius: 8px; background: var(--ink); color: white; text-decoration: none; margin-top: 16px; }
+@media (min-width: 700px) { .resumen { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 1000px) { .investigacion { grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); gap: 32px; } }
