@@ -2,7 +2,8 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { cleanup, render, screen, within } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import casos from '../data/casos.json'
+import fuente from '../data/casos.json'
+import { adaptarDatos } from '../data/datosJuego.js'
 import Pregunta from './Pregunta.jsx'
 import Pista from './Pista.jsx'
 import BarraProgreso from './BarraProgreso.jsx'
@@ -13,6 +14,7 @@ import App from '../App.jsx'
 
 beforeEach(() => { window.localStorage.clear() })
 afterEach(() => { cleanup(); window.location.hash = ''; window.localStorage.clear() })
+const casos = adaptarDatos(fuente).casos
 const pregunta = casos[0].preguntas[0]
 
 describe('Interacción accesible', () => {
@@ -50,7 +52,8 @@ describe('Interacción accesible', () => {
 
   it('valida verdadero/falso y deja respuestas abiertas pendientes sin compararlas literalmente', async () => {
     const user = userEvent.setup()
-    const view = render(<Pregunta pregunta={casos[0].preguntas[3]} />)
+    const verdaderoFalso = casos.flatMap(c => c.preguntas).find(p => p.tipo === 'verdadero-falso')
+    const view = render(<Pregunta pregunta={verdaderoFalso} />)
     await user.click(screen.getByRole('radio', { name: 'Falso' }))
     await user.click(screen.getByRole('button'))
     expect(screen.getByText('✓ Respuesta correcta')).toBeTruthy()
@@ -62,7 +65,7 @@ describe('Interacción accesible', () => {
     expect(onResponder.mock.calls[0][0]).toMatchObject({ correcta: null, puntos: 0 })
     expect(screen.getByText(/pendiente de valoración/)).toBeTruthy()
     const texto = screen.getByRole('textbox', { name: 'Tu respuesta' })
-    expect(texto.readOnly).toBe(true)
+    expect(texto.readOnly).toBe(false)
     expect(texto.disabled).toBe(false)
   })
 
@@ -103,7 +106,7 @@ describe('Interacción accesible', () => {
     const articulo = screen.getByRole('article', { name: casos[0].texto.titulo })
     expect(within(articulo).getByText(casos[0].texto.autor)).toBeTruthy()
     expect(within(articulo).getByText(casos[0].texto.fuente)).toBeTruthy()
-    expect(articulo.querySelectorAll('p').length).toBe(3)
+    expect(articulo.querySelectorAll('p').length).toBe(casos[0].texto.contenido.split(/\n\s*\n/).filter(Boolean).length)
   })
 
   it('aplica pistas antes de ganar puntos y conserva las respuestas al navegar', async () => {

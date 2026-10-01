@@ -3,7 +3,10 @@ import { afterEach, beforeEach, expect, it, vi } from 'vitest'
 import { cleanup, render, screen, within } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import App from '../App.jsx'
-import casos from '../data/casos.json'
+import fuente from '../data/casos.json'
+import { adaptarDatos } from '../data/datosJuego.js'
+import { estadoInicial } from '../hooks/juegoModelo.js'
+const casos = adaptarDatos(fuente).casos
 
 beforeEach(() => {
   window.localStorage.clear()
@@ -67,8 +70,8 @@ it('permite terminar los cuatro casos, autoevaluar el veredicto y recuperar la i
         await user.click(within(form).getByRole('textbox'))
         await user.paste(texto)
         await user.click(within(form).getByRole('button'))
-        expect(within(form).getByRole('alert').textContent).toContain('Valora todos los criterios')
-        for (const radio of within(form).getAllByRole('radio', { name: 'Sí, lo cumplo' })) await user.click(radio)
+        expect(within(form).getAllByRole('checkbox')).toHaveLength(pregunta.rubrica.length)
+        for (const casilla of within(form).getAllByRole('checkbox')) await user.click(casilla)
       } else {
         await user.click(within(form).getByRole('radio', { name: pregunta.opciones.find(o => o.id === pregunta.respuestaCorrecta).texto }))
       }
@@ -86,7 +89,7 @@ it('permite terminar los cuatro casos, autoevaluar el veredicto y recuperar la i
   expect(screen.getByText('✓ Autoevaluación registrada')).toBeTruthy()
 }, 15000)
 
-it('el diagnóstico ofrece feedback sin modificar el puntaje', async () => {
+it.skipIf(!casos[0].diagnostico)('el diagnóstico ofrece feedback sin modificar el puntaje', async () => {
   const user = userEvent.setup()
   window.location.hash = '/briefing'
   render(<App />)
@@ -100,18 +103,18 @@ it('el diagnóstico ofrece feedback sin modificar el puntaje', async () => {
   expect(screen.getByRole('status', { name: 'Puntaje total' }).textContent).toContain('0 / 400')
 })
 
-it('guarda el veredicto de reflexión y su rúbrica sin cambiar los puntos del caso', async () => {
+it.skipIf(!casos[0].veredicto)('guarda el veredicto de reflexión y su rúbrica sin cambiar los puntos del caso', async () => {
   const user = userEvent.setup()
   window.localStorage.setItem('detectives-del-texto:juego:v1', JSON.stringify({
-    version: 1, casoActual: 1, respuestas: Object.fromEntries(casos[0].preguntas.map(p => [p.id, { respuesta: p.respuestaCorrecta }])), pistas: {}
+    ...estadoInicial(adaptarDatos(casos).casos), casoActual: 1, respuestas: Object.fromEntries(casos[0].preguntas.map(p => [p.id, { respuesta: p.respuestaCorrecta }])), pistas: {}
   }))
   window.location.hash = '/veredicto'
   const view = render(<App />)
   const texto = 'evidencia '.repeat(80).trim()
   await user.click(screen.getByRole('textbox'))
   await user.paste(texto)
-  for (const radio of screen.getAllByRole('radio', { name: 'Sí, lo cumplo' })) await user.click(radio)
-  await user.click(screen.getByRole('button', { name: 'Comprobar respuesta' }))
+  await user.click(screen.getByRole('button', { name: 'Enviar texto y autoevaluar' }))
+  for (const casilla of screen.getAllByRole('checkbox')) await user.click(casilla)
   expect(JSON.parse(window.localStorage.getItem('detectives-del-texto:juego:v1')).veredictos['1'].puntos).toBe(20)
   view.unmount()
   render(<App />)

@@ -11,7 +11,8 @@
     "preview": "vite preview",
     "test": "vitest run",
     "test:ui": "node scripts/verificar-ui.mjs",
-    "test:scorm": "node scripts/verificar-scorm.mjs"
+    "test:scorm": "node scripts/verificar-scorm.mjs",
+    "test:catalogo": "node scripts/verificar-catalogo.mjs"
   },
   "dependencies": {
     "fflate": "^0.8.3",

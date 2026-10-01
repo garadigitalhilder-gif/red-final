@@ -1,8 +1,9 @@
 import { useId, useRef, useState } from 'react'
 import datos from '../data/interfaz.json'
 import styles from './Pista.module.css'
+import { COSTO_PISTA } from '../hooks/configuracion.js'
 
-export default function Pista({ pista, costo = datos.componentes.costoPista, onDescontar, revelada = false, disabled = false }) {
+export default function Pista({ pista, costo = COSTO_PISTA, onDescontar, revelada = false, disabled = false }) {
   const id = useId()
   const usada = useRef(revelada)
   const [visible, setVisible] = useState(revelada)

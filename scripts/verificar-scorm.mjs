@@ -2,10 +2,14 @@ import { chromium } from '@playwright/test'
 import assert from 'node:assert/strict'
 import fs from 'node:fs'
 
-const casos = JSON.parse(fs.readFileSync('src/data/casos.json', 'utf8'))
+const fuente = JSON.parse(fs.readFileSync(process.argv[2] ?? 'src/data/casos.json', 'utf8'))
+const casos = Array.isArray(fuente) ? fuente : fuente.casos
 const browser = await chromium.launch({ channel: 'msedge', headless: true })
 try {
   const page = await browser.newPage()
+  if (process.argv[2]) await page.route('**/src/data/casos.json*', route => route.fulfill({
+    contentType: 'application/javascript', body: 'export default ' + JSON.stringify(fuente) + ';'
+  }))
   const errores = []
   page.on('pageerror', error => errores.push(error.message))
   await page.goto('http://127.0.0.1:5173/scorm-demo.html')

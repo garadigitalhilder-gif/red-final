@@ -4,7 +4,7 @@ import Insignia from '../components/Insignia.jsx'
 import styles from './Juego.module.css'
 import Pregunta from '../components/Pregunta.jsx'
 import Pista from '../components/Pista.jsx'
-import TextoCaso from '../components/TextoCaso.jsx'
+import LecturaCaso from '../components/LecturaCaso.jsx'
 
 export default function Veredicto({ juego }) {
   const navigate = useNavigate()
@@ -14,7 +14,7 @@ export default function Veredicto({ juego }) {
   const insignia = juego.insigniasGanadas.find(i => i.casoId === caso?.id)
   const siguiente = juego.catalogo[juego.catalogo.findIndex(c => c.id === caso?.id) + 1]
   const lecturaTerminada = caso?.preguntas.filter(p => p.tipo !== 'abierta').every(p => juego.respuestas[p.id])
-  const pregunta = caso?.veredicto
+  const pregunta = caso?.preguntas.find(p => p.tipo === 'abierta') ?? caso?.veredicto
   const puntuable = caso?.preguntas.some(p => p.id === pregunta?.id)
   const respuesta = puntuable ? juego.respuestas[pregunta.id] : juego.veredictos[caso?.id]
   if (!resumen || !lecturaTerminada) return <section className={styles.pagina}>
@@ -24,20 +24,20 @@ export default function Veredicto({ juego }) {
   return <section className={styles.pagina}>
     <header className={styles.encabezado}><p className={styles.etiqueta}>{ui.despues}</p><h1>{datos.etapas.veredicto.titulo}: {caso.titulo}</h1><p>{ui.veredictoNota}</p></header>
     <div className={styles.veredicto}>
-      <details className={styles.referencia}><summary>{ui.evidencias}</summary><TextoCaso texto={caso.texto} /></details>
-      <div>
+      <details className={styles.referencia}><summary>{ui.evidencias}</summary><LecturaCaso key={caso.id} caso={caso} /></details>
+      {pregunta && <div>
         <h2>{ui.redactar}</h2>
         <Pregunta key={pregunta.id + '-' + juego.revision} pregunta={pregunta} mostrarPuntos={puntuable} respuestaGuardada={respuesta}
           onResponder={resultado => puntuable ? juego.responder(pregunta.id, resultado) : juego.guardarVeredicto(caso.id, resultado)} />
-        {puntuable && <Pista pista={pregunta.pista} revelada={Object.hasOwn(juego.pistas, pregunta.id)} disabled={Boolean(respuesta)} onDescontar={() => juego.descontar(pregunta.id)} />}
-      </div>
+        {puntuable && <Pista pista={pregunta.pista} revelada={Object.hasOwn(juego.pistas, pregunta.id)} onDescontar={() => juego.descontar(pregunta.id)} />}
+      </div>}
     </div>
-    <p className={styles.estado}>{!resumen.terminado ? ui.pendienteVeredicto : resumen.aprobado ? ui.aprobado : ui.noAprobado}</p>
+    <p className={styles.estado} role="status">{!resumen.terminado ? ui.pendienteVeredicto : resumen.aprobado ? juego.meta : juego.metaPendiente}</p>
     <dl><dt>{ui.puntosCaso}</dt><dd>{resumen.puntos} / {resumen.maximo}</dd>
       <dt>{ui.porcentaje}</dt><dd>{resumen.porcentaje.toLocaleString('es-CO', { maximumFractionDigits: 2 })}%</dd>
       <dt>{ui.descuentos}</dt><dd>{resumen.descuentos}</dd></dl>
     {insignia && <Insignia nivel={insignia.nivel} detalle={insignia.detalle} />}
-    <p>{ui.regla}</p>
+    <p>{juego.regla}</p>
     {resumen.aprobado && (siguiente
       ? siguiente.preguntas.length
         ? <Link className={styles.accion} to={'/caso/' + siguiente.id} onClick={() => juego.seleccionarCaso(siguiente.id)}>{ui.siguiente}</Link>

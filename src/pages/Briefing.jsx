@@ -9,17 +9,18 @@ export default function Briefing({ juego }) {
   const ui = datos.juego
   const [diagnostico, setDiagnostico] = useState({})
   const preparacion = juego.catalogo[0]
+  const diagnosticos = preparacion?.diagnostico ?? []
   return <section className={styles.pagina}>
-    <header className={styles.encabezado}><p className={styles.etiqueta}>{ui.antes}</p><h1>{datos.etapas.briefing.titulo}</h1><p>{ui.regla}</p></header>
+    <header className={styles.encabezado}><p className={styles.etiqueta}>{ui.antes}</p><h1>{datos.etapas.briefing.titulo}</h1><p>{juego.regla}</p></header>
     {!juego.almacenamientoDisponible && <p role="status">{ui.sinGuardado}</p>}
     <Marcador puntos={juego.puntos} maximo={juego.maximo} />
     <section className={styles.panel}><h2>{ui.instrucciones}</h2>
-      <ol className={styles.instrucciones}>{preparacion.historia.instrucciones.map(paso => <li key={paso.titulo}><h3>{paso.titulo}</h3><p>{paso.contenido}</p></li>)}</ol>
+      <ol className={styles.instrucciones}>{ui.instruccionesBase.map(paso => <li key={paso.titulo}><h3>{paso.titulo}</h3><p>{paso.contenido}</p></li>)}</ol>
     </section>
-    <section className={styles.panel} aria-labelledby="diagnostico"><h2 id="diagnostico">{ui.diagnostico}</h2><p>{ui.diagnosticoNota}</p>
-      <div className={styles.diagnostico}>{preparacion.diagnostico.map(pregunta => <Pregunta key={pregunta.id} pregunta={pregunta} mostrarPuntos={false} onResponder={respuesta => setDiagnostico(prev => ({ ...prev, [pregunta.id]: respuesta }))} />)}</div>
-      <p role="status">{Object.keys(diagnostico).length === preparacion.diagnostico.length ? ui.diagnosticoFin : ''}</p>
-    </section>
+    {diagnosticos.length > 0 && <section className={styles.panel} aria-labelledby="diagnostico"><h2 id="diagnostico">{ui.diagnostico}</h2><p>{ui.diagnosticoNota}</p>
+      <div className={styles.diagnostico}>{diagnosticos.map(pregunta => <Pregunta key={pregunta.id} pregunta={pregunta} mostrarPuntos={false} onResponder={respuesta => setDiagnostico(prev => ({ ...prev, [pregunta.id]: respuesta }))} />)}</div>
+      <p role="status">{Object.keys(diagnostico).length === diagnosticos.length ? ui.diagnosticoFin : ''}</p>
+    </section>}
     <h2>{ui.expedientes}</h2>
     <ol className={styles.lista}>{juego.catalogo.map(caso => {
       const desbloqueado = juego.estaDesbloqueado(caso.id)

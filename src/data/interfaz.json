@@ -86,7 +86,6 @@
     "revelarPista": "Revelar pista",
     "pistaRevelada": "Pista revelada",
     "descuento": "Descuento registrado",
-    "costoPista": 5,
     "progreso": "Progreso de la investigación",
     "progresoCaso": "Preguntas respondidas del caso",
     "progresoJuego": "Preguntas respondidas del juego disponible",
@@ -95,14 +94,42 @@
     "fuente": "Fuente",
     "licencia": "Licencia y procedencia",
     "retos": "Retos de la investigación",
-    "reglas": "Cada respuesta se registra una sola vez. Cada pista cuesta 5 puntos y se cobra una sola vez, incluso si la consultas antes de ganar puntos. El marcador nunca muestra un puntaje negativo. El progreso del juego incluye únicamente los casos con preguntas disponibles.",
+    "reglas": "Las respuestas cerradas se registran una sola vez. Puedes revisar tu texto y tu autoevaluación. Cada pista cuesta {costo} puntos y se cobra una sola vez. El puntaje nunca es negativo.",
     "casoPendiente": "Este caso todavía no tiene contenido disponible.",
     "insignias": {
-      "aprendiz": { "nombre": "Aprendiz", "icono": "✦", "descripcion": "Has terminado un nivel de dificultad básica." },
-      "detective": { "nombre": "Detective", "icono": "⌕", "descripcion": "Has terminado un nivel de dificultad intermedia." },
-      "inspector": { "nombre": "Inspector", "icono": "★", "descripcion": "Has terminado un nivel de dificultad avanzada." },
-      "maestro": { "nombre": "Maestro del Veredicto", "icono": "♜", "descripcion": "Has terminado el veredicto final." }
-    }
+      "aprendiz": {
+        "nombre": "Aprendiz",
+        "icono": "✦",
+        "descripcion": "Has terminado un nivel de dificultad básica."
+      },
+      "detective": {
+        "nombre": "Detective",
+        "icono": "⌕",
+        "descripcion": "Has terminado un nivel de dificultad intermedia."
+      },
+      "inspector": {
+        "nombre": "Inspector",
+        "icono": "★",
+        "descripcion": "Has terminado un nivel de dificultad avanzada."
+      },
+      "maestro": {
+        "nombre": "Maestro del Veredicto",
+        "icono": "♜",
+        "descripcion": "Has terminado el veredicto final."
+      }
+    },
+    "anio": "Año",
+    "vocabulario": "Vocabulario",
+    "entendido": "Entendido, continuar",
+    "advertencia": "Aviso de lectura",
+    "contexto": "Contexto del texto",
+    "objetivoPalabras": {
+      "min": 80,
+      "max": 120
+    },
+    "enviarAbierta": "Enviar texto y autoevaluar",
+    "actualizarAbierta": "Guardar cambios del texto",
+    "borrador": "Has modificado el texto. Guarda los cambios para actualizar la respuesta registrada."
   },
   "juego": {
     "finalizarSesion": "Guardar y finalizar sesión",
@@ -117,7 +144,7 @@
     "diagnostico": "Antes de investigar",
     "diagnosticoNota": "Dos preguntas para reconocer tu punto de partida. No suman ni restan puntos del juego.",
     "diagnosticoFin": "Diagnóstico completado. Revisa la retroalimentación y comienza tu investigación.",
-    "veredictoNota": "Esta reflexión se guarda con tu expediente. En los casos 1–3 no modifica el puntaje; en el caso 4 forma parte de las cinco preguntas y aporta hasta 20 puntos.",
+    "veredictoNota": "Las preguntas abiertas se valoran mediante tu autoevaluación. Puedes revisar el texto y marcar o desmarcar criterios; el puntaje se recalcula sin duplicarse.",
     "redactar": "Redacta tu veredicto",
     "pendienteVeredicto": "Revisa la evidencia y registra tu postura con la rúbrica para continuar.",
     "feedbackFinal": "Balance de la investigación",
@@ -129,7 +156,7 @@
     "durante": "02 · Investigación",
     "despues": "03 · Veredicto",
     "nivel": "Nivel",
-    "regla": "Termina todas las preguntas y consigue al menos el 70% del puntaje máximo del caso, después del descuento de pistas, para desbloquear el siguiente. La insignia se entrega al terminar el nivel, aunque debas reintentarlo para avanzar.",
+    "regla": "Termina todas las preguntas y consigue al menos el {umbral}% del puntaje máximo del caso, después del descuento de pistas, para desbloquear el siguiente. Las insignias se otorgan al aprobar su caso.",
     "sinGuardado": "El navegador no permite guardar el progreso. Puedes jugar, pero el avance se conserva solo mientras esta aplicación permanezca abierta.",
     "expedientes": "Expedientes",
     "caso": "Caso",
@@ -137,10 +164,10 @@
     "disponible": "Disponible",
     "pendiente": "Contenido en preparación",
     "completado": "Terminado",
-    "aprobado": "✓ Meta del 70% alcanzada",
-    "noAprobado": "Meta del 70% pendiente",
+    "aprobado": "✓ Meta del {umbral}% alcanzada",
+    "noAprobado": "Meta del {umbral}% pendiente",
     "continuar": "Continuar investigación",
-    "sinTerminar": "Termina las preguntas del caso actual para consultar su veredicto. Las respuestas abiertas pendientes de valoración no completan el nivel.",
+    "sinTerminar": "Termina las preguntas del caso actual para consultar su veredicto.",
     "volverCaso": "Volver al caso",
     "siguiente": "Abrir siguiente caso",
     "siguientePendiente": "El siguiente caso está desbloqueado, pero su contenido aún está en preparación.",
@@ -153,13 +180,42 @@
     "reiniciar": "Reiniciar el juego",
     "avisoReinicio": "Reiniciar borra todo el avance y las insignias guardadas.",
     "insignias": "Insignias ganadas",
-    "sinInsignias": "Termina un nivel para ganar tu primera insignia.",
+    "sinInsignias": "Aprueba un caso para ganar tu primera insignia.",
     "estado": "Estado",
     "puntaje": "Puntaje",
     "respuestas": "Respuestas registradas",
     "sinRespuesta": "Sin responder",
     "sinContenido": "—",
     "verResultados": "Ver resultados",
-    "elegir": "Elegir expediente"
+    "elegir": "Elegir expediente",
+    "creditos": "Créditos y fuentes",
+    "publicadoEn": "Publicación",
+    "sinCreditos": "No hay créditos disponibles.",
+    "sinAnio": "Año no indicado",
+    "principal": "Principal",
+    "balance": {
+      "sinIniciar": "Todavía no has examinado este expediente. Empieza por su título, su autor y su propósito.",
+      "pendiente": "Completa las preguntas pendientes y revisa las pistas del texto.",
+      "logrado": "Has alcanzado la meta del caso. Explica qué evidencias respaldan tus conclusiones.",
+      "reforzar": "Revisa la retroalimentación de las preguntas y las evidencias del texto antes de reintentar."
+    },
+    "instruccionesBase": [
+      {
+        "titulo": "Observa el texto",
+        "contenido": "Lee el título, el autor, la fuente y el contexto antes de responder."
+      },
+      {
+        "titulo": "Investiga las pistas",
+        "contenido": "Relaciona tus respuestas con evidencias del texto; las pistas tienen un costo indicado en su botón."
+      },
+      {
+        "titulo": "Revisa tu postura",
+        "contenido": "Cuando haya una pregunta abierta, envía el texto y autoevalúalo con la rúbrica. Puedes revisar tu respuesta."
+      }
+    ]
+  },
+  "configuracionLegada": {
+    "umbralAprobacion": 70,
+    "puntosPorPregunta": 20
   }
 }

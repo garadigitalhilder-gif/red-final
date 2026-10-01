@@ -28,7 +28,9 @@ function codificar(estado) {
   const registro = entrada => Object.entries(entrada ?? {}).map(([id, dato]) =>
     [id, dato.respuesta, ...(dato.autoevaluacion ? [dato.autoevaluacion] : [])])
   // Guarda las respuestas originales; puntos e insignias se recalculan al recuperar.
-  const compacto = { v: estado.version, c: estado.casoActual, r: registro(estado.respuestas),
+  const compacto = { v: estado.version, f: estado.firma, c: estado.casoActual, r: registro(estado.respuestas),
+    e: Object.entries(estado.respuestas ?? {}).filter(([, dato]) => dato.evaluada).map(([id]) => id),
+    u: Object.entries(estado.veredictos ?? {}).filter(([, dato]) => dato.evaluada).map(([id]) => id),
     p: Object.keys(estado.pistas ?? {}), t: registro(estado.veredictos) }
   const bytes = gzipSync(strToU8(JSON.stringify(compacto)))
   return 'G1:' + btoa(String.fromCharCode(...bytes))
@@ -41,8 +43,14 @@ function decodificar(texto) {
   const compacto = JSON.parse(strFromU8(gunzipSync(bytes)))
   const registro = entradas => Object.fromEntries((entradas ?? []).map(([id, respuesta, autoevaluacion]) =>
     [id, { respuesta, ...(autoevaluacion ? { autoevaluacion } : {}) }]))
-  return { version: compacto.v, casoActual: compacto.c, respuestas: registro(compacto.r),
-    pistas: Object.fromEntries((compacto.p ?? []).map(id => [id, COSTO_PISTA])), veredictos: registro(compacto.t) }
+  const respuestas = registro(compacto.r)
+  const veredictos = registro(compacto.t)
+  if (compacto.v === 2) {
+    for (const [id, dato] of Object.entries(respuestas)) if (dato.autoevaluacion) dato.evaluada = (compacto.e ?? []).includes(id)
+    for (const [id, dato] of Object.entries(veredictos)) if (dato.autoevaluacion) dato.evaluada = (compacto.u ?? []).includes(id)
+  }
+  return { version: compacto.v, firma: compacto.f, casoActual: compacto.c, respuestas,
+    pistas: Object.fromEntries((compacto.p ?? []).map(id => [id, COSTO_PISTA])), veredictos }
 }
 
 // La fábrica permite probar ventanas y LMS aislados. La aplicación usa la instancia final.
@@ -156,7 +164,7 @@ export function crearServicioScorm(ventana = () => typeof window === 'undefined'
     }
     return resultado(commit() && ok)
   }
-  function guardarPuntaje(puntos, minimo = 0, maximo = 400) {
+  function guardarPuntaje(puntos, minimo = 0, maximo = 100) {
     if (!iniciada) iniciar()
     if (![puntos, minimo, maximo].every(Number.isFinite) || maximo <= minimo) return resultado(false, { error: 'Puntaje inválido' })
     const porcentaje = Math.min(100, Math.max(0, (puntos - minimo) / (maximo - minimo) * 100))

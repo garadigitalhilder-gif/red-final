@@ -5,90 +5,87 @@ import { contarPalabras, normalizarRespuesta } from '../hooks/juegoModelo.js'
 
 const ui = datos.componentes
 
-// La primera respuesta enviada queda cerrada para evitar sumar puntos dos veces.
-export default function Pregunta({ pregunta, onResponder, respuestaGuardada, evaluarAbierta, mostrarPuntos = true }) {
+export default function Pregunta({ pregunta, onResponder, respuestaGuardada, mostrarPuntos = true }) {
   const id = useId()
   const formulario = useRef(null)
   const bloqueo = useRef(Boolean(respuestaGuardada))
   const [respuesta, setRespuesta] = useState(respuestaGuardada?.respuesta ?? '')
   const [resultado, setResultado] = useState(respuestaGuardada ?? null)
   const [error, setError] = useState('')
-  const [autoevaluacion, setAutoevaluacion] = useState(respuestaGuardada?.autoevaluacion ?? pregunta.rubrica?.map(() => null) ?? [])
+  const [autoevaluacion, setAutoevaluacion] = useState(respuestaGuardada?.autoevaluacion ?? pregunta.rubrica?.map(() => false) ?? [])
   const abierta = pregunta.tipo === 'abierta'
   const conRubrica = abierta && pregunta.rubrica?.length > 0
-  const pendiente = resultado?.correcta === null
+  const pendiente = abierta && !resultado?.evaluada
+  const modificada = abierta && resultado && respuesta !== resultado.respuesta
+  const minimo = pregunta.minPalabras ?? ui.objetivoPalabras.min
+  const maximo = pregunta.maxPalabras ?? ui.objetivoPalabras.max
 
-  // El mensaje se asocia al control y el foco permite corregir sin buscarlo.
-  function invalidar(mensaje, selector) {
+  function invalidar(mensaje) {
     setError(mensaje)
-    formulario.current?.querySelector(selector)?.focus()
+    formulario.current?.querySelector(abierta ? 'textarea' : 'input[type="radio"]')?.focus()
   }
-  function cambiarRespuesta(valor) {
-    setRespuesta(valor)
-    setError('')
-  }
-
-  function enviar(event) {
-    event.preventDefault()
-    if (bloqueo.current) return
-    if (!respuesta.trim()) {
-      invalidar(abierta ? ui.escribeRespuesta : ui.seleccionaRespuesta, abierta ? 'textarea' : 'input[type="radio"]')
-      return
-    }
-    if (conRubrica) {
-      const palabras = contarPalabras(respuesta)
-      if ((pregunta.minPalabras && palabras < pregunta.minPalabras) || (pregunta.maxPalabras && palabras > pregunta.maxPalabras)) {
-        invalidar(`${ui.rangoPalabras} ${pregunta.minPalabras}–${pregunta.maxPalabras} ${ui.palabras}.`, 'textarea')
-        return
-      }
-      if (autoevaluacion.some(valor => valor === null)) {
-        invalidar(ui.faltaRubrica, `[name="${id}-criterio-${autoevaluacion.findIndex(valor => valor === null)}"]`)
-        return
-      }
-    }
-    // Una respuesta abierta requiere rúbrica; nunca se compara literalmente.
-    const evaluacion = conRubrica
-      ? normalizarRespuesta(pregunta, { respuesta, autoevaluacion })
-      : abierta
-      ? evaluarAbierta?.(respuesta, pregunta) ?? { correcta: null, puntos: 0 }
-      : { correcta: respuesta === pregunta.respuestaCorrecta, puntos: respuesta === pregunta.respuestaCorrecta ? pregunta.puntos : 0 }
-    const nuevo = { ...evaluacion, respuesta }
-    bloqueo.current = true
-    setError('')
+  function guardar(entrada) {
+    const nuevo = normalizarRespuesta(pregunta, entrada)
     setResultado(nuevo)
     onResponder?.(nuevo)
   }
+  function enviar(event) {
+    event.preventDefault()
+    if (!abierta && bloqueo.current) return
+    if (!respuesta.trim()) { invalidar(abierta ? ui.escribeRespuesta : ui.seleccionaRespuesta); return }
+    setError('')
+    if (abierta) {
+      // El rango es un objetivo orientativo; no se evalúa el contenido del escrito.
+      guardar({ respuesta, autoevaluacion, evaluada: Boolean(resultado?.evaluada) })
+    } else {
+      bloqueo.current = true
+      guardar({ respuesta })
+    }
+  }
+  function valorar(index, marcada) {
+    const valores = autoevaluacion.map((actual, i) => i === index ? marcada : actual)
+    setAutoevaluacion(valores)
+    // Valora el texto enviado, evitando guardar silenciosamente un borrador diferente.
+    guardar({ respuesta: resultado.respuesta, autoevaluacion: valores, evaluada: true })
+  }
 
   return <form ref={formulario} className={styles.card} onSubmit={enviar} aria-label={pregunta.enunciado}>
-    <fieldset className={styles.fieldset} disabled={!abierta && Boolean(resultado)} aria-describedby={error ? id + '-error' : undefined}>
+    <fieldset className={styles.fieldset} disabled={!abierta && Boolean(resultado)}>
       <legend className={styles.legend}>{pregunta.enunciado}</legend>
-      {abierta
-        ? <><label htmlFor={id + '-abierta'}>{ui.tuRespuesta}</label><textarea id={id + '-abierta'} rows={5} value={respuesta} readOnly={Boolean(resultado)} aria-invalid={Boolean(error) && error !== ui.faltaRubrica} aria-describedby={[conRubrica ? id + '-instrucciones' : '', pregunta.minPalabras ? id + '-palabras' : '', error ? id + '-error' : ''].filter(Boolean).join(' ') || undefined} onChange={e => cambiarRespuesta(e.target.value)} /></>
-        : <div className={styles.options}>{pregunta.opciones.map(opcion =>
-          <label className={styles.option} key={opcion.id}>
-            <input type="radio" name={id} value={opcion.id} checked={respuesta === opcion.id} aria-invalid={Boolean(error)} aria-describedby={error ? id + '-error' : undefined} onChange={e => cambiarRespuesta(e.target.value)} />
-            <span>{opcion.texto}</span>
-          </label>
-        )}</div>}
-      {conRubrica && <section className={styles.rubrica} aria-label={ui.rubrica}>
-        <h3>{ui.rubrica}</h3><p id={id + '-instrucciones'}>{ui.reglaRubrica}</p>
-        {pregunta.minPalabras && <p id={id + '-palabras'}>{contarPalabras(respuesta)} / {pregunta.minPalabras}–{pregunta.maxPalabras} {ui.palabras}</p>}
-        {pregunta.rubrica.map((criterio, index) => <fieldset className={styles.criterio} key={criterio.criterio} disabled={Boolean(resultado)}>
-          <legend>{criterio.criterio} · {criterio.puntos} {ui.puntos}</legend>
-          <p>{criterio.descripcion}</p>
-          {[true, false].map(valor => <label className={styles.option} key={String(valor)}>
-            <input type="radio" name={id + '-criterio-' + index} checked={autoevaluacion[index] === valor} aria-invalid={error === ui.faltaRubrica && autoevaluacion[index] === null} aria-describedby={error === ui.faltaRubrica ? id + '-error' : undefined} onChange={() => { setError(''); setAutoevaluacion(prev => prev.map((actual, i) => i === index ? valor : actual)) }} />
-            <span>{valor ? ui.cumple : ui.noCumple}</span>
-          </label>)}
-        </fieldset>)}
-      </section>}
+      {abierta ? <>
+        <label htmlFor={id + '-abierta'}>{ui.tuRespuesta}</label>
+        <textarea id={id + '-abierta'} rows={5} value={respuesta} aria-invalid={Boolean(error)}
+          aria-describedby={[id + '-palabras', error ? id + '-error' : ''].filter(Boolean).join(' ')}
+          onChange={e => { setRespuesta(e.target.value); setError('') }} />
+        <p id={id + '-palabras'}>{contarPalabras(respuesta)} / {minimo}–{maximo} {ui.palabras}</p>
+      </> : <div className={styles.options}>{pregunta.opciones.map(opcion =>
+        <label className={styles.option} key={opcion.id}>
+          <input type="radio" name={id} value={opcion.id} checked={respuesta === String(opcion.id)}
+            aria-invalid={Boolean(error)} aria-describedby={error ? id + '-error' : undefined}
+            onChange={e => { setRespuesta(e.target.value); setError('') }} />
+          <span>{opcion.texto}</span>
+        </label>
+      )}</div>}
     </fieldset>
     <p id={id + '-error'} className={styles.error} role="alert">{error}</p>
-    <button className={styles.submit} type="submit" aria-disabled={Boolean(resultado)}>{resultado ? ui.respuestaRegistrada : ui.comprobar}</button>
+    <button className={styles.submit} type="submit" aria-disabled={!abierta && Boolean(resultado)}>
+      {abierta ? resultado ? ui.actualizarAbierta : ui.enviarAbierta : resultado ? ui.respuestaRegistrada : ui.comprobar}
+    </button>
+    {abierta && <p role="status">{modificada ? ui.borrador : ''}</p>}
+    {conRubrica && resultado && <section className={styles.rubrica} aria-labelledby={id + '-rubrica'}>
+      <h3 id={id + '-rubrica'}>{ui.rubrica}</h3><p>{ui.reglaRubrica}</p>
+      <ul className={styles.listaRubrica}>{pregunta.rubrica.map((criterio, index) => <li key={index}>
+        <label className={styles.option}>
+          <input type="checkbox" checked={autoevaluacion[index]} onChange={e => valorar(index, e.target.checked)} aria-describedby={id + '-criterio-' + index} />
+          <span>{criterio.criterio} · {criterio.puntos} {ui.puntos}</span>
+        </label><p id={id + '-criterio-' + index}>{criterio.descripcion}</p>
+      </li>)}</ul>
+    </section>}
     <div className={styles.feedback} aria-live="polite" aria-atomic="true">
-      {resultado && <><strong>{resultado.autoevaluacion ? ui.autoevaluacionRegistrada : pendiente ? ui.pendiente : resultado.correcta ? ui.correcta : ui.incorrecta}</strong>
-        <p>{pendiente ? ui.revisionAbierta : resultado.retroalimentacion ?? (resultado.correcta ? pregunta.retroalimentacionCorrecta : pregunta.retroalimentacionIncorrecta)}</p>
-        {!pendiente && mostrarPuntos && <p>{ui.puntosObtenidos}: {resultado.puntos}</p>}
+      {resultado && <>
+        <strong>{abierta ? pendiente ? ui.pendiente : ui.autoevaluacionRegistrada : resultado.correcta ? ui.correcta : ui.incorrecta}</strong>
+        <p>{abierta ? pregunta.retroalimentacionCorrecta : resultado.correcta ? pregunta.retroalimentacionCorrecta : pregunta.retroalimentacionIncorrecta}</p>
+        {mostrarPuntos && <p>{ui.puntosObtenidos}: {resultado.puntos}</p>}
       </>}
     </div>
   </form>

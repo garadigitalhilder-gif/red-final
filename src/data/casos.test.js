@@ -1,6 +1,8 @@
 import { describe, expect, it } from 'vitest'
-import casos from './casos.json'
+import fuente from './casos.json'
+import { adaptarDatos } from './datosJuego.js'
 import { normalizarRespuesta } from '../hooks/juegoModelo.js'
+const casos = adaptarDatos(fuente).casos
 
 describe('Catálogo importado', () => {
   it('contiene cuatro casos, veinte preguntas válidas y 400 puntos', () => {

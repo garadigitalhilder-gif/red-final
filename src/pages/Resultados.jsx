@@ -8,8 +8,8 @@ export default function Resultados({ juego }) {
   const navigate = useNavigate()
   const ui = datos.juego
   const resumen = juego.resumenes.find(r => r.id === juego.casoActual)
-  const final = juego.caso.retroalimentacionFinal
-  const comentario = !resumen.respondidas ? final.sinIniciar : !resumen.terminado ? final.pendiente : resumen.aprobado ? final.logrado : final.reforzar
+  const final = juego.caso?.retroalimentacionFinal ?? ui.balance
+  const comentario = !resumen?.respondidas ? final.sinIniciar : !resumen.terminado ? final.pendiente : resumen.aprobado ? final.logrado : final.reforzar
   return <section className={styles.pagina}>
     <header className={styles.encabezado}><p className={styles.etiqueta}>{ui.informe}</p><h1>{datos.etapas.resultados.titulo}</h1></header>
     {!juego.almacenamientoDisponible && <p role="status">{ui.sinGuardado}</p>}
@@ -20,13 +20,13 @@ export default function Resultados({ juego }) {
       <tbody>{juego.catalogo.map((caso, index) => {
         const resumen = juego.resumenes[index]
         return <tr key={caso.id}><th scope="row">{caso.titulo || ui.caso + ' ' + caso.id}</th>
-          <td>{!juego.estaDesbloqueado(caso.id) ? ui.bloqueado : !caso.preguntas.length ? ui.pendiente : resumen.terminado ? (resumen.aprobado ? ui.aprobado : ui.noAprobado) : ui.disponible}</td>
+          <td>{!juego.estaDesbloqueado(caso.id) ? ui.bloqueado : !caso.preguntas.length ? ui.pendiente : resumen.terminado ? (resumen.aprobado ? juego.meta : juego.metaPendiente) : ui.disponible}</td>
           <td>{caso.preguntas.length ? resumen.puntos + ' / ' + resumen.maximo : ui.sinContenido}</td></tr>
       })}</tbody>
     </table></div>
     <h2>{ui.insignias}</h2>
     {juego.insigniasGanadas.length
-      ? juego.insigniasGanadas.map(i => <div key={i.casoId}><p>{ui.caso} {i.casoId}</p><Insignia nivel={i.nivel} detalle={i.detalle} nivelEncabezado={3} /></div>)
+      ? juego.insigniasGanadas.map(i => <div key={i.detalle.id}><p>{ui.caso} {i.casoId}</p><Insignia nivel={i.nivel} detalle={i.detalle} nivelEncabezado={3} /></div>)
       : <p>{ui.sinInsignias}</p>}
     <h2>{ui.respuestas}</h2>
     {Object.entries(juego.veredictos).map(([id, respuesta]) => <section className={styles.panel} key={id}><h3>{datos.etapas.veredicto.titulo} · {ui.caso} {id}</h3><p>{respuesta.respuesta}</p><p>{datos.componentes.autoevaluacionRegistrada}</p></section>)}
@@ -34,11 +34,12 @@ export default function Resultados({ juego }) {
       const respuesta = juego.respuestas[pregunta.id]
       return <li key={pregunta.id}><h3>{pregunta.enunciado}</h3>
         <p>{respuesta ? pregunta.opciones.find(o => o.id === respuesta.respuesta)?.texto ?? respuesta.respuesta : ui.sinRespuesta}</p>
-        {respuesta && <><strong>{respuesta.autoevaluacion ? datos.componentes.autoevaluacionRegistrada : respuesta.correcta === null ? datos.componentes.pendiente : respuesta.correcta ? datos.componentes.correcta : datos.componentes.incorrecta}</strong>
-          <p>{respuesta.correcta === null ? datos.componentes.revisionAbierta : respuesta.correcta ? pregunta.retroalimentacionCorrecta : pregunta.retroalimentacionIncorrecta}</p></>}
+        {respuesta && <><strong>{pregunta.tipo === 'abierta' ? respuesta.evaluada ? datos.componentes.autoevaluacionRegistrada : datos.componentes.pendiente : respuesta.correcta ? datos.componentes.correcta : datos.componentes.incorrecta}</strong>
+          <p>{pregunta.tipo === 'abierta' ? pregunta.retroalimentacionCorrecta : respuesta.correcta ? pregunta.retroalimentacionCorrecta : pregunta.retroalimentacionIncorrecta}</p></>}
       </li>
     })}</ol>
     <Link to="/briefing">{ui.elegir}</Link>
+    <Link to="/creditos">{ui.creditos}</Link>
     {juego.estadoScorm.modo === 'lms' && <>
       <button className={styles.boton} disabled={juego.estadoScorm.cerrada} onClick={juego.finalizarJuego}>{ui.finalizarSesion}</button>
       {juego.estadoScorm.cerrada && <p role="status">{ui.sesionCerrada} {ui.avisoSesion}</p>}

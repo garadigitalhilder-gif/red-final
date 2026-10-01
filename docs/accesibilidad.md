@@ -18,7 +18,7 @@ Referencia: [WCAG 2.1, contraste mínimo](https://www.w3.org/WAI/WCAG21/Understa
 
 ## Verificación
 
-Las pruebas de componentes y navegación incluyen respuestas, rúbricas, diagnóstico sin puntuación, almacenamiento, permisos y reinicio. `npm run test:ui` usa Microsoft Edge y axe-core para inspeccionar ocho vistas a 320, 390 y 1280 px, con texto al 100 % y 200 %: 48 combinaciones. Comprueba desbordamiento horizontal, contraste y otras reglas WCAG automáticas, texto/preguntas apilados o en columnas y salto al contenido con teclado. También revisa un juego nuevo: errores, selección con flechas, envío y revelado de pistas con teclado, espaciado de texto y preferencia de movimiento reducido. El informe se guarda en `artifacts/ui/reporte.json`.
+Las pruebas de componentes y navegación incluyen respuestas, rúbricas, diagnóstico sin puntuación, almacenamiento, permisos y reinicio. `npm run test:ui` usa Microsoft Edge y axe-core para inspeccionar nueve vistas, incluidos créditos, a 320, 390 y 1280 px, con texto al 100 % y 200 %: 54 combinaciones. Comprueba desbordamiento horizontal, contraste y otras reglas WCAG automáticas, texto/preguntas apilados o en columnas y salto al contenido con teclado. También revisa un juego nuevo: errores, selección con flechas, envío y revelado de pistas con teclado, espaciado de texto y preferencia de movimiento reducido. El informe se guarda en `artifacts/ui/reporte.json`. Puede recibir la ruta de un catálogo externo para probarlo sin sobrescribir casos.json.
 
 El aumento automático modifica el tamaño de fuente raíz. Se debe complementar con el zoom real del navegador al 200 %: no se utiliza la escala de píxeles del dispositivo como sustituto del zoom.
 
@@ -30,8 +30,8 @@ La revisión automatizada no constituye una certificación de conformidad. Sigue
 
 - Las insignias del informe usan h3 debajo de su sección h2; cada página conserva un h1.
 - El título de la pestaña identifica la vista y el foco pasa al h1 al navegar. Saltar al contenido conserva el foco en main sin interferir con HashRouter.
-- Los errores identifican los controles con aria-invalid y aria-describedby; el foco llega a la primera respuesta o criterio pendiente. Los mensajes se limpian al corregir y especifican el rango de palabras.
-- Las instrucciones y el contador de palabras se asocian a la respuesta abierta. Tras enviarla, queda de solo lectura, accesible para recorrer y copiar con teclado.
+- Los errores de respuesta vacía identifican los controles con aria-invalid y aria-describedby; el foco llega al control. Los mensajes se limpian al corregir.
+- El contador orientativo de palabras se asocia a la respuesta abierta. Tras enviarla, sigue editable y muestra las casillas de autoevaluación; sus cambios actualizan los puntos sin duplicarlos.
 - El nombre accesible de cada nivel incluye su estado. Las respuestas, pistas y el marcador mantienen anuncios y señales textuales además del color.
 - El texto largo puede ajustarse en la marca, los niveles y las insignias. El sello escala con rem; los números decorativos no se parten al ampliar.
 - Los colores forzados del sistema conservan indicadores de foco, botones y nivel activo; se conserva prefers-reduced-motion.
@@ -50,7 +50,7 @@ Iniciar con `npm run dev`. Probar tanto sin progreso como después de terminar l
 - [ ] Enviar una pregunta vacía: se anuncia el error y el foco pasa al control. Escribir fuera del rango de palabras o dejar un criterio sin marcar: se indica cómo corregirlo.
 - [ ] Con NVDA y Firefox/Chrome, o VoiceOver y Safari, revisar landmarks, encabezados, leyendas, etiquetas, progreso y estados de los niveles. Las insignias pertenecen a su sección.
 - [ ] Con ese lector, responder y revelar una pista: se anuncian retroalimentación y puntaje sin requerir cambiar el foco. Revisar también diagnóstico, reinicio, guardado bloqueado y finalización en LMS.
-- [ ] Después de enviar una respuesta abierta, recorrer y copiar su texto con teclado; no permite editarla ni duplicar puntos.
+- [ ] Después de enviar una respuesta abierta, editar y guardar su texto, recorrer y marcar/desmarcar criterios con teclado; los puntos se reemplazan sin duplicarse.
 - [ ] Usar zoom real del navegador al 200 % en todas las vistas: texto y controles visibles, sin pérdida de contenido ni funcionalidad. Revisar también fuente ampliada desde los ajustes del navegador.
 - [ ] En ancho de 320 px, comprobar reflujo y lectura sin desplazamiento horizontal general. La tabla puede desplazarse en su propia región con teclado.
 - [ ] Aplicar interlineado 1.5, espaciado entre letras .12em, palabras .16em y párrafos 2em: no hay recortes, superposición ni botones inaccesibles.

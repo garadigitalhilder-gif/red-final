@@ -1,11 +1,10 @@
 import { Link } from 'react-router-dom'
 import datos from '../data/interfaz.json'
 import styles from './Pages.module.css'
-import casos from '../data/casos.json'
 
-export default function Inicio() {
+export default function Inicio({ juego }) {
   const inicio = datos.inicio
-  const historia = casos[0].historia
+  const historia = juego.catalogo[0]?.historia ?? { etiqueta: inicio.etiqueta, titulo: juego.configuracion.titulo, contenido: inicio.descripcion, cierre: inicio.nota }
   return <div className={styles.hero}>
     <section><p className={styles.eyebrow}>{historia.etiqueta}</p><h1 className={styles.title}>{historia.titulo}</h1>
       <p className={styles.description}>{historia.contenido}</p>

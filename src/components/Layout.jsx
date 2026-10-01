@@ -14,13 +14,13 @@ export default function Layout({ juego }) {
   // El foco sigue el contenido cuando cambia la ruta.
   useEffect(() => {
     const encabezado = contenido.current?.querySelector('h1')
-    document.title = `${encabezado?.textContent ?? datos.interfaz.nombre} · Detectives del Texto`
+    document.title = `${encabezado?.textContent ?? juego.configuracion.titulo} · ${juego.configuracion.titulo}`
     if (anterior.current !== pathname && encabezado) {
       encabezado.tabIndex = -1
       encabezado.focus()
     }
     anterior.current = pathname
-  }, [pathname])
+  }, [pathname, juego.configuracion.titulo])
   return <div className={styles.app}>
     <a className={styles.skip} href="#contenido" onClick={(event) => {
       // Evita modificar el hash reservado para la navegación.
@@ -29,8 +29,8 @@ export default function Layout({ juego }) {
       contenido.current?.scrollIntoView()
     }}>{datos.interfaz.saltar}</a>
     <header className={styles.header}>
-      <Link className={styles.brand} to="/"><span className={styles.mark} aria-hidden="true">DT</span><span>{datos.interfaz.nombre}<small>{datos.interfaz.nivel}</small></span></Link>
-      <nav aria-label="Principal"><Link to="/">{datos.interfaz.inicio}</Link><Link to="/briefing">{datos.juego.agencia}</Link><Link to="/resultados">{datos.juego.informe}</Link></nav>
+      <Link className={styles.brand} to="/"><span className={styles.mark} aria-hidden="true">DT</span><span>{juego.configuracion.titulo}<small>{datos.interfaz.nivel}</small></span></Link>
+      <nav aria-label={datos.juego.principal}><Link to="/">{datos.interfaz.inicio}</Link><Link to="/briefing">{datos.juego.agencia}</Link><Link to="/resultados">{datos.juego.informe}</Link></nav>
     </header>
     <MenuNiveles juego={juego} />
     <main id="contenido" ref={contenido} tabIndex={-1} className={styles.main}>
@@ -41,6 +41,6 @@ export default function Layout({ juego }) {
       {juego.estadoScorm?.error && juego.estadoScorm.modo === 'lms' && <p role="status">{datos.juego.falloLms}</p>}
       <Outlet />
     </main>
-    <footer className={styles.footer}>{datos.interfaz.pie}</footer>
+    <footer className={styles.footer}><p>{datos.interfaz.pie}</p><Link to="/creditos">{datos.juego.creditos}</Link></footer>
   </div>
 }

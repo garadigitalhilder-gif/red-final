@@ -2,7 +2,8 @@
 import { act, cleanup, renderHook } from '@testing-library/react'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import useJuego from './useJuego.js'
-import { CLAVE_JUEGO } from './juegoModelo.js'
+import { CLAVE_JUEGO, estadoInicial } from './juegoModelo.js'
+import { adaptarDatos } from '../data/datosJuego.js'
 
 // Catálogo de prueba con niveles publicados; no modifica los casos pendientes reales.
 const catalogo = ['básica', 'intermedia', 'avanzada'].map((dificultad, index) => ({
@@ -35,7 +36,7 @@ describe('useJuego', () => {
     expect(result.current.resumenes[0].porcentaje).toBe(70)
     expect(result.current.estaDesbloqueado(2)).toBe(true)
     expect(result.current.estaDesbloqueado(3)).toBe(false)
-    expect(result.current.insigniasGanadas).toEqual([{ casoId: 1, nivel: 'aprendiz' }])
+    expect(result.current.insigniasGanadas[0]).toMatchObject({ casoId: 1, nivel: 'aprendiz' })
     act(() => result.current.seleccionarCaso(2))
     expect(result.current.casoActual).toBe(2)
     terminar(result, 2)
@@ -80,7 +81,7 @@ describe('useJuego', () => {
     const segunda = renderHook(() => useJuego(catalogo))
     expect(segunda.result.current.casoActual).toBe(2)
     expect(segunda.result.current.casosCompletados).toEqual([1])
-    expect(segunda.result.current.insigniasGanadas).toEqual([{ casoId: 1, nivel: 'aprendiz' }])
+    expect(segunda.result.current.insigniasGanadas[0]).toMatchObject({ casoId: 1, nivel: 'aprendiz' })
     expect(segunda.result.current.pistasUsadas).toEqual(['c2-p0'])
     expect(segunda.result.current.puntos).toBe(100)
   })
@@ -120,7 +121,7 @@ describe('useJuego', () => {
     expect(primera.result.current.puntos).toBe(0)
     primera.unmount()
     window.localStorage.setItem(CLAVE_JUEGO, JSON.stringify({
-      version: 1, casoActual: 3, respuestas: {
+      ...estadoInicial(adaptarDatos(catalogo).casos), casoActual: 3, respuestas: {
         'c1-p0': { respuesta: 'a', correcta: false, puntos: 999 },
         'c2-p0': { respuesta: 'a', puntos: 999 }
       }, pistas: { 'c1-p1': -100 }

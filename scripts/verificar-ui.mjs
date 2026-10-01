@@ -3,17 +3,30 @@ import fs from 'node:fs'
 import assert from 'node:assert/strict'
 
 // Revisión automática en un navegador real; requiere npm run dev en el puerto 5173.
-const casos = JSON.parse(fs.readFileSync('src/data/casos.json', 'utf8'))
-const estado = { version: 1, casoActual: 4, respuestas: {}, pistas: {}, veredictos: {} }
+const rutaFuente = process.argv[2] ?? 'src/data/casos.json'
+const fuente = JSON.parse(fs.readFileSync(rutaFuente, 'utf8'))
+const casos = Array.isArray(fuente) ? fuente : fuente.casos
+const estado = { version: 2, casoActual: casos.at(-1).id, respuestas: {}, pistas: {}, veredictos: {} }
 for (const caso of casos) for (const p of caso.preguntas) {
   estado.respuestas[p.id] = p.tipo === 'abierta'
-    ? { respuesta: 'evidencia '.repeat(80), autoevaluacion: p.rubrica.map(() => true) }
+    ? { respuesta: 'evidencia '.repeat(80), autoevaluacion: p.rubrica.map(() => true), evaluada: true }
     : { respuesta: p.respuestaCorrecta }
 }
 fs.mkdirSync('artifacts/ui', { recursive: true })
 const browser = await chromium.launch({ channel: 'msedge', headless: true })
 try {
   const page = await browser.newPage()
+  const sustituir = pagina => pagina.route('**/src/data/casos.json*', route => route.fulfill({
+    contentType: 'application/javascript', body: 'export default ' + JSON.stringify(fuente) + ';'
+  }))
+  if (process.argv[2]) await sustituir(page)
+  await page.goto('http://127.0.0.1:5173/')
+  estado.firma = await page.evaluate(async () => {
+    const { adaptarDatos } = await import('/src/data/datosJuego.js')
+    const { firmaCatalogo } = await import('/src/hooks/juegoModelo.js')
+    const datos = adaptarDatos()
+    return firmaCatalogo(datos.casos, datos.juego.umbralAprobacion / 100)
+  })
   const errores = []
   page.on('pageerror', error => errores.push(error.message))
   await page.addInitScript(estadoGuardado => {
@@ -24,7 +37,7 @@ try {
   const reporte = []
   for (const ancho of [320, 390, 1280]) {
     await page.setViewportSize({ width: ancho, height: 900 })
-    for (const escala of [100, 200]) for (const ruta of ['/', '/briefing', '/caso/1', '/caso/2', '/caso/3', '/caso/4', '/veredicto', '/resultados']) {
+    for (const escala of [100, 200]) for (const ruta of ['/', '/briefing', ...casos.map(c => '/caso/' + c.id), '/veredicto', '/resultados', '/creditos']) {
       await page.goto('http://127.0.0.1:5173/#' + ruta)
       await page.getByRole('heading', { level: 1 }).waitFor()
       await page.addStyleTag({ content: `html { font-size: ${escala}% !important; }` })
@@ -56,6 +69,7 @@ try {
   assert.equal(await page.locator('main').evaluate(e => e === document.activeElement), true)
   // Un estado nuevo permite probar errores, opciones y pistas habilitadas.
   const nueva = await browser.newPage({ viewport: { width: 390, height: 900 } })
+  if (process.argv[2]) await sustituir(nueva)
   await nueva.goto('http://127.0.0.1:5173/#/caso/1')
   const primera = nueva.getByRole('form').first()
   await primera.getByRole('button').focus()
