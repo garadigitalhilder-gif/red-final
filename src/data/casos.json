@@ -1,898 +1,457 @@
-[
-  {
-    "id": 1,
-    "titulo": "El rastro de las ideas",
-    "nivel": 1,
-    "dificultad": "Básica",
-    "objetivo": "Identificar la idea principal, los datos clave, el tipo de texto y la intención comunicativa.",
-    "introduccion": "Una biblioteca nocturna apareció de la nada en un colegio. Tu misión: seguir el rastro de las ideas y descubrir qué dice realmente la noticia.",
-    "texto": {
-      "titulo": "Abren biblioteca nocturna para estudiantes de grado 11",
-      "autor": "Texto original redactado para este RED (hechos ficticios)",
-      "fuente": "Elaboración propia del grupo",
-      "licencia": "CC BY-NC-SA 4.0",
-      "tipo": "Noticia",
-      "contenido": "La Institución Educativa Los Almendros, de Cartagena, abrió este lunes una biblioteca nocturna para que los estudiantes de grado 11 se preparen en las semanas previas a las Pruebas Saber 11. El espacio funcionará de lunes a jueves, entre las 6:00 y las 9:00 p. m., y contará con tres docentes voluntarios que resolverán dudas de lectura crítica y matemáticas.\n\nSegún la rectora, la iniciativa nació después de que una encuesta institucional mostrara que el 60 % de los jóvenes no tiene un lugar tranquilo para estudiar en casa. Durante la primera noche asistieron 45 estudiantes, aunque la capacidad del lugar es de 80.\n\nLa biblioteca estará abierta hasta finales de octubre y, si los resultados son positivos, podría ampliarse a otros grados el próximo año."
-    },
-    "pistas": [
-      "Pregúntate: ¿quién, qué, cuándo, dónde y por qué? Las noticias suelen responder estas preguntas en el primer párrafo.",
-      "La idea principal es lo más importante que dice todo el texto, no un detalle aislado."
-    ],
-    "preguntas": [
-      {
-        "id": "c1p1",
-        "enunciado": "¿Cuál es la idea principal del texto?",
-        "tipo": "opcion-multiple",
-        "opciones": [
-          {
-            "id": "a",
-            "texto": "Un colegio abrió una biblioteca nocturna para ayudar a los estudiantes de grado 11 a prepararse para Saber 11."
-          },
-          {
-            "id": "b",
-            "texto": "Los estudiantes de Cartagena no tienen un lugar para estudiar en casa."
-          },
-          {
-            "id": "c",
-            "texto": "Los docentes voluntarios resolverán dudas de matemáticas."
-          },
-          {
-            "id": "d",
-            "texto": "La biblioteca podría ampliarse a otros grados el próximo año."
-          }
-        ],
-        "respuestaCorrecta": "a",
-        "retroalimentacionCorrecta": "¡Buen rastro! La idea principal resume el hecho central: la apertura de la biblioteca y su propósito.",
-        "retroalimentacionIncorrecta": "Esa opción es un detalle o una consecuencia, no la idea que resume todo el texto. Busca qué se hizo y para qué.",
-        "pista": "La idea principal responde: ¿qué ocurrió y con qué fin?",
-        "puntos": 20
-      },
-      {
-        "id": "c1p2",
-        "enunciado": "¿Qué tipo de texto es el que acabas de leer?",
-        "tipo": "opcion-multiple",
-        "opciones": [
-          {
-            "id": "a",
-            "texto": "Una columna de opinión"
-          },
-          {
-            "id": "b",
-            "texto": "Una noticia"
-          },
-          {
-            "id": "c",
-            "texto": "Un cuento"
-          },
-          {
-            "id": "d",
-            "texto": "Una carta personal"
-          }
-        ],
-        "respuestaCorrecta": "b",
-        "retroalimentacionCorrecta": "Correcto. Informa un hecho reciente con datos verificables, fecha y lugar.",
-        "retroalimentacionIncorrecta": "Fíjate en que relata un hecho actual con datos, lugar y fechas, sin opinión personal ni historia inventada.",
-        "pista": "Mira si el texto cuenta un hecho real y reciente con datos concretos.",
-        "puntos": 20
-      },
-      {
-        "id": "c1p3",
-        "enunciado": "Según el texto, ¿por qué se creó la biblioteca nocturna?",
-        "tipo": "opcion-multiple",
-        "opciones": [
-          {
-            "id": "a",
-            "texto": "Porque los docentes querían trabajar en la noche."
-          },
-          {
-            "id": "b",
-            "texto": "Porque una encuesta mostró que muchos jóvenes no tienen un lugar tranquilo para estudiar en casa."
-          },
-          {
-            "id": "c",
-            "texto": "Porque la capacidad del colegio era de 80 personas."
-          },
-          {
-            "id": "d",
-            "texto": "Porque las Pruebas Saber 11 se adelantaron."
-          }
-        ],
-        "respuestaCorrecta": "b",
-        "retroalimentacionCorrecta": "¡Exacto! Encontraste la causa explícita en el segundo párrafo.",
-        "retroalimentacionIncorrecta": "La causa está dicha de forma directa en el texto. Relee el segundo párrafo.",
-        "pista": "Busca la palabra «encuesta» en el texto.",
-        "puntos": 20
-      },
-      {
-        "id": "c1p4",
-        "enunciado": "Verdadero o falso: según el texto, la biblioteca funcionará durante todo el año.",
-        "tipo": "verdadero-falso",
-        "opciones": [
-          {
-            "id": "v",
-            "texto": "Verdadero"
-          },
-          {
-            "id": "f",
-            "texto": "Falso"
-          }
-        ],
-        "respuestaCorrecta": "f",
-        "retroalimentacionCorrecta": "Muy bien. El texto dice que estará abierta hasta finales de octubre.",
-        "retroalimentacionIncorrecta": "Revisa el último párrafo: la biblioteca tiene una fecha de cierre.",
-        "pista": "Lee con atención el último párrafo.",
-        "puntos": 20
-      },
-      {
-        "id": "c1p5",
-        "enunciado": "¿Cuál es la intención comunicativa principal del texto?",
-        "tipo": "opcion-multiple",
-        "opciones": [
-          {
-            "id": "a",
-            "texto": "Informar sobre un hecho reciente."
-          },
-          {
-            "id": "b",
-            "texto": "Convencer al lector de apoyar una causa."
-          },
-          {
-            "id": "c",
-            "texto": "Entretener con una historia inventada."
-          },
-          {
-            "id": "d",
-            "texto": "Dar instrucciones para armar algo."
-          }
-        ],
-        "respuestaCorrecta": "a",
-        "retroalimentacionCorrecta": "Correcto. El texto presenta datos sin tomar posición: su intención es informar.",
-        "retroalimentacionIncorrecta": "El texto no pide nada al lector ni cuenta una ficción. Piensa en qué hace con los hechos.",
-        "pista": "¿El autor opina o solo presenta hechos?",
-        "puntos": 20
-      }
-    ],
-    "insignia": {
-      "id": "aprendiz",
-      "nombre": "Aprendiz",
-      "descripcion": "Resolviste tu primer caso.",
-      "casoRequerido": 1
-    },
-    "historia": {
-      "etiqueta": "ARCHIVO 011 · AGENCIA LITERARIA",
-      "titulo": "Las palabras también dejan huellas.",
-      "contenido": "La Agencia Literaria ha recibido cuatro expedientes. A primera vista, todos parecen claros: una noticia, una opinión, una carta y una propuesta. Pero entre sus líneas se esconden ideas, intenciones y argumentos que merecen una segunda mirada. Tu misión es seguir las evidencias, cuestionar lo que parece obvio y escribir un veredicto propio. La investigación empieza contigo.",
-      "cierre": "Cuatro expedientes. Una mirada crítica.",
-      "instrucciones": [
-        {
-          "titulo": "Observa el texto",
-          "contenido": "Lee el título, identifica la fuente y recorre el texto completo antes de responder."
-        },
-        {
-          "titulo": "Investiga las pistas",
-          "contenido": "Relaciona cada respuesta con una evidencia. Si necesitas ayuda, una pista cuesta 5 puntos."
-        },
-        {
-          "titulo": "Escribe tu veredicto",
-          "contenido": "Defiende tu interpretación y revisa tu postura con la rúbrica. En el caso 4, esta autoevaluación aporta hasta 20 puntos."
-        }
-      ]
-    },
-    "diagnostico": [
-      {
-        "id": "diagnostico-1",
-        "tipo": "opcion-multiple",
-        "enunciado": "Antes de compartir una noticia, ¿qué acción ayuda más a evaluarla críticamente?",
-        "opciones": [
-          {
-            "id": "a",
-            "texto": "Comprobar la fuente y las evidencias que presenta."
-          },
-          {
-            "id": "b",
-            "texto": "Contar cuántas personas la han compartido."
-          },
-          {
-            "id": "c",
-            "texto": "Elegirla porque su título confirma mi opinión."
-          }
-        ],
-        "respuestaCorrecta": "a",
-        "retroalimentacionCorrecta": "Verificar la fuente y las evidencias permite evaluar el respaldo de una noticia.",
-        "retroalimentacionIncorrecta": "La popularidad y la coincidencia con tu opinión no prueban una afirmación. Comprueba su fuente y sus evidencias.",
-        "pista": "",
-        "puntos": 0
-      },
-      {
-        "id": "diagnostico-2",
-        "tipo": "verdadero-falso",
-        "enunciado": "Estar de acuerdo con la conclusión de un texto significa que todos sus argumentos son sólidos.",
-        "opciones": [
-          {
-            "id": "v",
-            "texto": "Verdadero"
-          },
-          {
-            "id": "f",
-            "texto": "Falso"
-          }
-        ],
-        "respuestaCorrecta": "f",
-        "retroalimentacionCorrecta": "Puedes compartir una conclusión y encontrar argumentos débiles. Analiza la calidad de cada razón.",
-        "retroalimentacionIncorrecta": "Una conclusión que te convence también puede apoyarse en razones débiles. Evalúa las evidencias de cada argumento.",
-        "pista": "",
-        "puntos": 0
-      }
-    ],
-    "veredicto": {
-      "id": "c1-veredicto",
-      "enunciado": "Escribe de 80 a 120 palabras tu veredicto sobre la biblioteca nocturna. Explica qué valor tiene la iniciativa, apoya tu postura con dos razones del texto y reconoce una posible dificultad.",
-      "tipo": "abierta",
-      "opciones": [],
-      "respuestaCorrecta": null,
-      "retroalimentacionCorrecta": "Tu postura y tu autoevaluación quedaron registradas. Revisa cómo conectaste tus razones con las evidencias del texto.",
-      "retroalimentacionIncorrecta": "Tu postura quedó registrada. Usa los criterios de la rúbrica para decidir qué mejorar en una próxima versión.",
-      "pista": "Presenta tu tesis, dos razones y una objeción; cierra con una conclusión que se apoye en el texto.",
-      "puntos": 20,
-      "minPalabras": 80,
-      "maxPalabras": 120,
-      "rubrica": [
-        {
-          "criterio": "Tesis clara",
-          "descripcion": "Se entiende de inmediato cuál es mi postura.",
-          "puntos": 5
-        },
-        {
-          "criterio": "Argumentos",
-          "descripcion": "Incluyo al menos dos razones diferentes que apoyan mi tesis.",
-          "puntos": 5
-        },
-        {
-          "criterio": "Punto de vista contrario",
-          "descripcion": "Reconozco una objeción y respondo a ella.",
-          "puntos": 5
-        },
-        {
-          "criterio": "Coherencia y escritura",
-          "descripcion": "Uso conectores, mi texto es claro y cuido la ortografía.",
-          "puntos": 5
-        }
-      ]
-    },
-    "retroalimentacionFinal": {
-      "logrado": "Has alcanzado la meta del expediente. Tu siguiente reto es explicar por qué descartas las otras opciones y respaldar cada conclusión con evidencias.",
-      "reforzar": "Vuelve a leer los fragmentos relacionados con tus respuestas incorrectas. Distingue lo que el texto afirma de lo que supones antes de reintentar.",
-      "pendiente": "Tu investigación sigue abierta. Completa las preguntas y revisa tu postura con la rúbrica.",
-      "sinIniciar": "Todavía no has examinado este expediente. Empieza por su título, su fuente y su propósito."
-    }
+{
+  "juego": {
+    "titulo": "Detectives del Texto: casos de lectura crítica",
+    "umbralAprobacion": 70,
+    "puntosPorPregunta": 20,
+    "insignias": [
+      { "id": "aprendiz", "nombre": "Aprendiz", "descripcion": "Resolviste tu primer caso.", "casoRequerido": 1 },
+      { "id": "detective", "nombre": "Detective", "descripcion": "Dominas la tesis, los argumentos y el lenguaje figurado.", "casoRequerido": 2 },
+      { "id": "inspector", "nombre": "Inspector", "descripcion": "Descubres inferencias y falacias con ojo crítico.", "casoRequerido": 3 },
+      { "id": "maestro", "nombre": "Maestro del Veredicto", "descripcion": "Valoras textos y defiendes tu postura con argumentos sólidos.", "casoRequerido": 4 }
+    ]
   },
-  {
-    "id": 2,
-    "titulo": "El sospechoso oculto",
-    "nivel": 2,
-    "dificultad": "Media",
-    "objetivo": "Identificar la tesis, los argumentos, la concesión y la intención del autor en un texto argumentativo.",
-    "introduccion": "Alguien quiere convencerte de algo, pero no lo dice directamente. Descubre qué defiende y con qué argumentos.",
-    "texto": {
-      "titulo": "El celular no es el enemigo del aula",
-      "autor": "Texto original redactado con asistencia de IA para Detectives del Texto",
-      "fuente": "Elaboración original para este RED; texto didáctico sin publicación externa.",
-      "licencia": "CC BY-NC-SA 4.0",
-      "tipo": "Columna de opinión",
-      "contenido": "Prohibir el celular en el colegio es la salida fácil. Cada tanto, un rector anuncia con orgullo que los teléfonos quedan vetados en las aulas, como si el problema desapareciera al guardarlos en un casillero.\n\nPero el celular no distrae por existir: distrae porque nadie nos enseñó a usarlo con criterio. Un estudiante que aprende a verificar una noticia, a consultar un diccionario o a organizar sus tareas con una aplicación convierte el aparato en una herramienta. Además, la prohibición suele producir el efecto contrario: lo vedado se vuelve más atractivo y se usa a escondidas.\n\nEs cierto que hay clases en las que el teléfono estorba, y nadie propone usarlo sin límites. Sin embargo, la respuesta no es la prohibición total, sino acordar reglas claras entre docentes y estudiantes.\n\nEducar para el uso responsable de la tecnología es más útil que fingir que no existe. Por eso, en lugar de vetar el celular, los colegios deberían enseñar a usarlo."
-    },
-    "pistas": [
-      "La tesis es la idea que el autor defiende. A veces aparece al final, como conclusión.",
-      "Los argumentos son las razones que sirven para apoyar la tesis.",
-      "Distingue la función de una razón dentro del texto de su solidez: el autor puede usar un argumento que todavía necesita pruebas."
-    ],
-    "preguntas": [
-      {
-        "id": "c2p1",
-        "enunciado": "¿Cuál es la tesis del autor?",
-        "tipo": "opcion-multiple",
-        "opciones": [
-          {
-            "id": "a",
-            "texto": "Los estudiantes no deben tener celular."
-          },
-          {
-            "id": "b",
-            "texto": "Los colegios deberían enseñar a usar el celular en lugar de prohibirlo."
-          },
-          {
-            "id": "c",
-            "texto": "Los rectores tienen la culpa de las distracciones en clase."
-          },
-          {
-            "id": "d",
-            "texto": "El celular debe usarse sin límites en todas las clases."
-          }
-        ],
-        "respuestaCorrecta": "b",
-        "retroalimentacionCorrecta": "¡Caso resuelto! La tesis aparece como conclusión en la última oración.",
-        "retroalimentacionIncorrecta": "La tesis es la postura central que todo el texto busca sostener. Mira la última oración.",
-        "pista": "Busca la frase que empieza con «Por eso».",
-        "puntos": 20
+  "creditos": [
+    { "caso": 1, "autor": "Horacio Quiroga", "obra": "A la deriva", "anio": 1912, "publicadoEn": "Fray Mocho (1912); recogido en Cuentos de amor de locura y de muerte (1917)", "fuente": "Ciudad Seva", "url": "https://ciudadseva.com/texto/a-la-deriva/", "licencia": "Dominio público", "origen": "dominio-publico" },
+    { "caso": 2, "autor": "José Martí", "obra": "Nuestra América (fragmento)", "anio": 1891, "publicadoEn": "La Revista Ilustrada de Nueva York, 10 de enero de 1891", "fuente": "Centro de Estudios Martianos", "url": "https://www.josemarti.cu/publicacion/nuestra-america/", "licencia": "Dominio público", "origen": "dominio-publico" },
+    { "caso": 3, "autor": "Elaboración propia del grupo", "obra": "Carta al director: no al nuevo horario escolar", "anio": 2026, "publicadoEn": "Texto original (personajes y hechos ficticios)", "fuente": "Elaboración propia", "url": "", "licencia": "CC BY-NC-SA 4.0", "origen": "propio" },
+    { "caso": 4, "autor": "Simón Bolívar", "obra": "Carta de Jamaica (fragmento)", "anio": 1815, "publicadoEn": "Kingston, 6 de septiembre de 1815", "fuente": "dipublico.org (Documentos Históricos)", "url": "https://www.dipublico.org/111224/carta-de-jamaica-de-simon-bolivar-fechada-el-6-de-septiembre-de-1815/", "licencia": "Dominio público", "origen": "dominio-publico" }
+  ],
+  "casos": [
+    {
+      "id": 1,
+      "titulo": "El rastro de las ideas",
+      "nivel": 1,
+      "dificultad": "Básica-media",
+      "objetivo": "Identificar el tema, la secuencia de hechos, el tipo de narrador y el efecto del ambiente en un cuento.",
+      "introduccion": "Un hombre, un río y un destino. Sigue el rastro de las ideas del cuento para descubrir qué quiere decirnos realmente su autor.",
+      "advertencia": "Este cuento narra la muerte de un personaje por una mordedura de serpiente. Es una lectura habitual en el aula, pero si prefieres, consulta con tu docente antes de empezar.",
+      "texto": {
+        "titulo": "A la deriva",
+        "autor": "Horacio Quiroga",
+        "anio": 1912,
+        "fuente": "Ciudad Seva — https://ciudadseva.com/texto/a-la-deriva/",
+        "licencia": "Dominio público",
+        "tipo": "Cuento",
+        "contenido": "El hombre pisó algo blancuzco, y en seguida sintió la mordedura en el pie. Saltó adelante, y al volverse con un juramento vio una yaracacusú que, arrollada sobre sí misma, esperaba otro ataque.\n\nEl hombre echó una veloz ojeada a su pie, donde dos gotitas de sangre engrosaban dificultosamente, y sacó el machete de la cintura. La víbora vio la amenaza, y hundió más la cabeza en el centro mismo de su espiral; pero el machete cayó de lomo, dislocándole las vértebras.\n\nEl hombre se bajó hasta la mordedura, quitó las gotitas de sangre, y durante un instante contempló. Un dolor agudo nacía de los dos puntitos violetas, y comenzaba a invadir todo el pie. Apresuradamente se ligó el tobillo con su pañuelo y siguió por la picada hacia su rancho.\n\nEl dolor en el pie aumentaba, con sensación de tirante abultamiento, y de pronto el hombre sintió dos o tres fulgurantes puntadas que, como relámpagos, habían irradiado desde la herida hasta la mitad de la pantorrilla. Movía la pierna con dificultad; una metálica sequedad de garganta, seguida de sed quemante, le arrancó un nuevo juramento.\n\nLlegó por fin al rancho y se echó de brazos sobre la rueda de un trapiche. Los dos puntitos violeta desaparecían ahora en la monstruosa hinchazón del pie entero. La piel parecía adelgazada y a punto de ceder, de tensa. Quiso llamar a su mujer, y la voz se quebró en un ronco arrastre de garganta reseca. La sed lo devoraba.\n\n—¡Dorotea! —alcanzó a lanzar en un estertor—. ¡Dame caña!\n\nSu mujer corrió con un vaso lleno, que el hombre sorbió en tres tragos. Pero no había sentido gusto alguno.\n\n—¡Te pedí caña, no agua! —rugió de nuevo—. ¡Dame caña!\n\n—¡Pero es caña, Paulino! —protestó la mujer, espantada.\n\n—¡No, me diste agua! ¡Quiero caña, te digo!\n\nLa mujer corrió otra vez, volviendo con la damajuana. El hombre tragó uno tras otro dos vasos, pero no sintió nada en la garganta.\n\n—Bueno; esto se pone feo —murmuró entonces, mirando su pie lívido y ya con lustre gangrenoso. Sobre la honda ligadura del pañuelo, la carne desbordaba como una monstruosa morcilla.\n\nLos dolores fulgurantes se sucedían en continuos relampagueos y llegaban ahora a la ingle. La atroz sequedad de garganta que el aliento parecía caldear más, aumentaba a la par. Cuando pretendió incorporarse, un fulminante vómito lo mantuvo medio minuto con la frente apoyada en la rueda de palo.\n\nPero el hombre no quería morir, y descendiendo hasta la costa subió a su canoa. Sentose en la popa y comenzó a palear hasta el centro del Paraná. Allí la corriente del río, que en las inmediaciones del Iguazú corre seis millas, lo llevaría antes de cinco horas a Tacurú-Pucú.\n\nEl hombre, con sombría energía, pudo efectivamente llegar hasta el medio del río; pero allí sus manos dormidas dejaron caer la pala en la canoa, y tras un nuevo vómito —de sangre esta vez— dirigió una mirada al sol que ya trasponía el monte.\n\nLa pierna entera, hasta medio muslo, era ya un bloque deforme y durísimo que reventaba la ropa. El hombre cortó la ligadura y abrió el pantalón con su cuchillo: el bajo vientre desbordó hinchado, con grandes manchas lívidas y terriblemente doloroso. El hombre pensó que no podría jamás llegar él solo a Tacurú-Pucú, y se decidió a pedir ayuda a su compadre Alves, aunque hacía mucho tiempo que estaban disgustados.\n\nLa corriente del río se precipitaba ahora hacia la costa brasileña, y el hombre pudo fácilmente atracar. Se arrastró por la picada en cuesta arriba, pero a los veinte metros, exhausto, quedó tendido de pecho.\n\n—¡Alves! —gritó con cuanta fuerza pudo; y prestó oído en vano.\n\n—¡Compadre Alves! ¡No me niegue este favor! —clamó de nuevo, alzando la cabeza del suelo. En el silencio de la selva no se oyó un solo rumor. El hombre tuvo aún valor para llegar hasta su canoa, y la corriente, cogiéndola de nuevo, la llevó velozmente a la deriva.\n\nEl Paraná corre allí en el fondo de una inmensa hoya, cuyas paredes, altas de cien metros, encajonan fúnebremente el río. Desde las orillas bordeadas de negros bloques de basalto, asciende el bosque, negro también. Adelante, a los costados, detrás, la eterna muralla lúgubre, en cuyo fondo el río arremolinado se precipita en incesantes borbollones de agua fangosa. El paisaje es agresivo, y reina en él un silencio de muerte. Al atardecer, sin embargo, su belleza sombría y calma cobra una majestad única.\n\nEl sol había caído ya cuando el hombre, semitendido en el fondo de la canoa, tuvo un violento escalofrío. Y de pronto, con asombro, enderezó pesadamente la cabeza: se sentía mejor. La pierna le dolía apenas, la sed disminuía, y su pecho, libre ya, se abría en lenta inspiración.\n\nEl veneno comenzaba a irse, no había duda. Se hallaba casi bien, y aunque no tenía fuerzas para mover la mano, contaba con la caída del rocío para reponerse del todo. Calculó que antes de tres horas estaría en Tacurú-Pucú.\n\nEl bienestar avanzaba, y con él una somnolencia llena de recuerdos. No sentía ya nada ni en la pierna ni en el vientre. ¿Viviría aún su compadre Gaona en Tacurú-Pucú? Acaso viera también a su ex patrón mister Dougald, y al recibidor del obraje.\n\n¿Llegaría pronto? El cielo, al poniente, se abría ahora en pantalla de oro, y el río se había coloreado también. Desde la costa paraguaya, ya entenebrecida, el monte dejaba caer sobre el río su frescura crepuscular, en penetrantes efluvios de azahar y miel silvestre. Una pareja de guacamayos cruzó muy alto y en silencio hacia el Paraguay.\n\nAllá abajo, sobre el río de oro, la canoa derivaba velozmente, girando a ratos sobre sí misma ante el borbollón de un remolino. El hombre que iba en ella se sentía cada vez mejor, y pensaba entretanto en el tiempo justo que había pasado sin ver a su ex patrón Dougald. ¿Tres años? Tal vez no, no tanto. ¿Dos años y nueve meses? Acaso. ¿Ocho meses y medio? Eso sí, seguramente.\n\nDe pronto sintió que estaba helado hasta el pecho.\n\n¿Qué sería? Y la respiración…\n\nAl recibidor de maderas de mister Dougald, Lorenzo Cubilla, lo había conocido en Puerto Esperanza un viernes santo… ¿Viernes? Sí, o jueves…\n\nEl hombre estiró lentamente los dedos de la mano.\n\n—Un jueves…\n\nY cesó de respirar."
       },
-      {
-        "id": "c2p2",
-        "enunciado": "¿Cuál de las siguientes ideas funciona como ARGUMENTO a favor de la tesis?",
-        "tipo": "opcion-multiple",
-        "opciones": [
-          {
-            "id": "a",
-            "texto": "Un rector anuncia con orgullo que los celulares quedan vetados."
-          },
-          {
-            "id": "b",
-            "texto": "Hay clases en las que el teléfono estorba."
-          },
-          {
-            "id": "c",
-            "texto": "Lo prohibido se vuelve más atractivo y se usa a escondidas."
-          },
-          {
-            "id": "d",
-            "texto": "Los teléfonos se guardan en un casillero."
-          }
-        ],
-        "respuestaCorrecta": "c",
-        "retroalimentacionCorrecta": "Es una razón que el autor usa para cuestionar la prohibición y apoyar su tesis. Identificar su función argumentativa no demuestra que siempre ocurra: la columna no aporta datos para verificar esa generalización.",
-        "retroalimentacionIncorrecta": "Esa opción describe una situación o reconoce un límite, pero no es una razón que respalde la tesis.",
-        "pista": "Un argumento responde a «¿por qué debería creerle al autor?».",
-        "puntos": 20
-      },
-      {
-        "id": "c2p3",
-        "enunciado": "La frase «Es cierto que hay clases en las que el teléfono estorba» es una:",
-        "tipo": "opcion-multiple",
-        "opciones": [
-          {
-            "id": "a",
-            "texto": "Tesis"
-          },
-          {
-            "id": "b",
-            "texto": "Concesión: el autor reconoce parte de la postura contraria."
-          },
-          {
-            "id": "c",
-            "texto": "Conclusión"
-          },
-          {
-            "id": "d",
-            "texto": "Definición"
-          }
-        ],
-        "respuestaCorrecta": "b",
-        "retroalimentacionCorrecta": "Es una concesión: acepta que el celular puede estorbar y luego, con «Sin embargo», propone reglas. Reconocer un límite matiza la tesis, pero no demuestra por sí solo que sea verdadera.",
-        "retroalimentacionIncorrecta": "Fíjate en la palabra que sigue: «Sin embargo». Primero concede algo y luego defiende su postura.",
-        "pista": "Observa el conector «Sin embargo» que viene después.",
-        "puntos": 20
-      },
-      {
-        "id": "c2p4",
-        "enunciado": "¿Cuál es la intención comunicativa predominante del autor?",
-        "tipo": "opcion-multiple",
-        "opciones": [
-          {
-            "id": "a",
-            "texto": "Informar un hecho."
-          },
-          {
-            "id": "b",
-            "texto": "Persuadir al lector para que comparta su postura."
-          },
-          {
-            "id": "c",
-            "texto": "Narrar una anécdota."
-          },
-          {
-            "id": "d",
-            "texto": "Describir un objeto."
-          }
-        ],
-        "respuestaCorrecta": "b",
-        "retroalimentacionCorrecta": "Exacto. Presenta una tesis, la sustenta y busca convencer.",
-        "retroalimentacionIncorrecta": "El autor toma posición y da razones. Eso es propio de textos que buscan convencer.",
-        "pista": "¿El autor se limita a contar o intenta cambiar tu opinión?",
-        "puntos": 20
-      },
-      {
-        "id": "c2p5",
-        "enunciado": "Verdadero o falso: el autor propone usar el celular sin ningún límite en el colegio.",
-        "tipo": "verdadero-falso",
-        "opciones": [
-          {
-            "id": "v",
-            "texto": "Verdadero"
-          },
-          {
-            "id": "f",
-            "texto": "Falso"
-          }
-        ],
-        "respuestaCorrecta": "f",
-        "retroalimentacionCorrecta": "Bien. Dice expresamente que nadie propone usarlo sin límites y que se acuerden reglas claras.",
-        "retroalimentacionIncorrecta": "Relee el tercer párrafo: el autor propone reglas claras, no ausencia de límites.",
-        "pista": "Lee el tercer párrafo con atención.",
-        "puntos": 20
-      }
-    ],
-    "insignia": {
-      "id": "detective",
-      "nombre": "Detective",
-      "descripcion": "Dominas la tesis, los argumentos y la intención del autor.",
-      "casoRequerido": 2
-    },
-    "veredicto": {
-      "id": "c2-veredicto",
-      "enunciado": "Escribe de 80 a 120 palabras tu postura sobre el uso del celular en el colegio. Presenta una tesis, dos argumentos y una objeción a la que respondas.",
-      "tipo": "abierta",
-      "opciones": [],
-      "respuestaCorrecta": null,
-      "retroalimentacionCorrecta": "Tu postura y tu autoevaluación quedaron registradas. Revisa cómo conectaste tus razones con las evidencias del texto.",
-      "retroalimentacionIncorrecta": "Tu postura quedó registrada. Usa los criterios de la rúbrica para decidir qué mejorar en una próxima versión.",
-      "pista": "Presenta tu tesis, dos razones y una objeción; cierra con una conclusión que se apoye en el texto.",
-      "puntos": 20,
-      "minPalabras": 80,
-      "maxPalabras": 120,
-      "rubrica": [
-        {
-          "criterio": "Tesis clara",
-          "descripcion": "Se entiende de inmediato cuál es mi postura.",
-          "puntos": 5
-        },
-        {
-          "criterio": "Argumentos",
-          "descripcion": "Incluyo al menos dos razones diferentes que apoyan mi tesis.",
-          "puntos": 5
-        },
-        {
-          "criterio": "Punto de vista contrario",
-          "descripcion": "Reconozco una objeción y respondo a ella.",
-          "puntos": 5
-        },
-        {
-          "criterio": "Coherencia y escritura",
-          "descripcion": "Uso conectores, mi texto es claro y cuido la ortografía.",
-          "puntos": 5
-        }
-      ]
-    },
-    "retroalimentacionFinal": {
-      "logrado": "Identificaste cómo se conectan tesis, razones, concesión e intención persuasiva. En el siguiente caso evaluarás si esos razonamientos se sostienen.",
-      "reforzar": "Localiza la propuesta del último párrafo y distingue las razones que la apoyan de la objeción que el autor admite. Persuadir no es lo mismo que informar sin tomar postura.",
-      "pendiente": "Tu investigación sigue abierta. Completa las preguntas y revisa tu postura con la rúbrica.",
-      "sinIniciar": "Todavía no has examinado este expediente. Empieza por su título, su fuente y su propósito."
-    }
-  },
-  {
-    "id": 3,
-    "titulo": "¿Quién miente?",
-    "nivel": 3,
-    "dificultad": "Media-alta",
-    "objetivo": "Inferir criterios de evaluación de evidencias, detectar falacias y distinguirlas del sesgo de confirmación.",
-    "introduccion": "Una carta rechaza el cambio de horario escolar. Examina sus razones: una falacia no demuestra que alguien mienta ni que su conclusión sea necesariamente falsa.",
-    "texto": {
-      "titulo": "Carta al director: no al nuevo horario escolar",
-      "autor": "Texto original redactado con asistencia de IA para Detectives del Texto",
-      "fuente": "Elaboración original para este RED; carta con personajes, cifras y situaciones ficticias. Las falacias se incluyen intencionalmente para analizarlas.",
-      "licencia": "CC BY-NC-SA 4.0",
-      "tipo": "Carta de opinión",
-      "contenido": "Señor director:\n\nEl concejal Ramírez propone que los colegios empiecen las clases a las 8:00 a. m. en lugar de las 6:30. Pero ¿qué podemos esperar de alguien que nunca ha trabajado como docente? Su propuesta no merece ser escuchada.\n\nAdemás, si retrasamos la entrada, mañana querrán que las clases empiecen al mediodía y pasado mañana no querrán estudiar. Los jóvenes de hoy son perezosos y siempre piden más.\n\nTampoco hay más opciones: o mantenemos el horario de siempre o destruimos la disciplina de nuestros colegios.\n\nPor último, tres de cada cuatro vecinos de mi barrio piensan igual que yo, así que es evidente que tengo la razón. Para preparar esta carta guardé los mensajes de familias que apoyan el horario actual. Descarté los testimonios de estudiantes que prefieren entrar más tarde y ni siquiera leí el informe que recomendaba evaluar otros horarios: seguramente exagera sus beneficios.\n\nMe preocupa que una entrada más tarde dificulte los turnos de transporte y la organización familiar, aunque todavía no he consultado los recorridos ni las necesidades de todas las familias.\n\nAtentamente,\nUn padre preocupado"
-    },
-    "pistas": [
-      "Una falacia es un error de razonamiento. Detectarla no demuestra por sí sola que el autor mienta o que su conclusión sea falsa.",
-      "Distingue atacar a la persona, encadenar consecuencias sin pruebas y presentar solo dos extremos.",
-      "El sesgo de confirmación favorece información que coincide con una creencia y descarta la que la cuestiona. Una inferencia necesita indicios del texto."
-    ],
-    "preguntas": [
-      {
-        "id": "c3p1",
-        "enunciado": "La frase «¿qué podemos esperar de alguien que nunca ha trabajado como docente?» es una falacia de tipo:",
-        "tipo": "opcion-multiple",
-        "opciones": [
-          {
-            "id": "a",
-            "texto": "Ataque a la persona (ad hominem)"
-          },
-          {
-            "id": "b",
-            "texto": "Pendiente resbaladiza"
-          },
-          {
-            "id": "c",
-            "texto": "Falso dilema"
-          },
-          {
-            "id": "d",
-            "texto": "Apelación a la mayoría"
-          }
-        ],
-        "respuestaCorrecta": "a",
-        "retroalimentacionCorrecta": "¡Atrapado! Desacredita a la persona en lugar de refutar su propuesta.",
-        "retroalimentacionIncorrecta": "Observa a quién ataca el autor: a la persona, no a la idea.",
-        "pista": "¿El autor discute la propuesta o a quien la hizo?",
-        "puntos": 20
-      },
-      {
-        "id": "c3p2",
-        "enunciado": "«Si retrasamos la entrada, mañana querrán que las clases empiecen al mediodía y pasado mañana no querrán estudiar» es una falacia de tipo:",
-        "tipo": "opcion-multiple",
-        "opciones": [
-          {
-            "id": "a",
-            "texto": "Ataque a la persona"
-          },
-          {
-            "id": "b",
-            "texto": "Pendiente resbaladiza: anuncia una cadena de consecuencias sin demostrarla."
-          },
-          {
-            "id": "c",
-            "texto": "Apelación a la autoridad"
-          },
-          {
-            "id": "d",
-            "texto": "Argumento válido"
-          }
-        ],
-        "respuestaCorrecta": "b",
-        "retroalimentacionCorrecta": "Correcto. Pasa de un cambio pequeño a un desastre sin pruebas intermedias.",
-        "retroalimentacionIncorrecta": "El autor encadena consecuencias cada vez más exageradas sin demostrar que ocurrirán.",
-        "pista": "Mira cómo crece la consecuencia: «mañana… pasado mañana…».",
-        "puntos": 20
-      },
-      {
-        "id": "c3p3",
-        "enunciado": "«O mantenemos el horario de siempre o destruimos la disciplina» es un:",
-        "tipo": "opcion-multiple",
-        "opciones": [
-          {
-            "id": "a",
-            "texto": "Argumento basado en datos"
-          },
-          {
-            "id": "b",
-            "texto": "Falso dilema: presenta solo dos opciones cuando existen más."
-          },
-          {
-            "id": "c",
-            "texto": "Contraargumento"
-          },
-          {
-            "id": "d",
-            "texto": "Ejemplo"
-          }
-        ],
-        "respuestaCorrecta": "b",
-        "retroalimentacionCorrecta": "Muy bien. Hay horarios intermedios y otras soluciones que el autor ignora.",
-        "retroalimentacionIncorrecta": "El autor reduce la situación a solo dos extremos. ¿Existen otras posibilidades?",
-        "pista": "Cuenta cuántas opciones plantea el autor.",
-        "puntos": 20
-      },
-      {
-        "id": "c3p4",
-        "enunciado": "El autor guarda mensajes favorables, descarta testimonios contrarios y rechaza un informe sin leerlo. ¿Qué sesgo evidencia esa selección?",
-        "tipo": "opcion-multiple",
-        "opciones": [
-          {
-            "id": "a",
-            "texto": "Sesgo de autoridad: acepta el informe únicamente por el cargo de quien lo escribió."
-          },
-          {
-            "id": "b",
-            "texto": "Sesgo de confirmación: favorece información que coincide con su creencia y excluye la que podría cuestionarla."
-          },
-          {
-            "id": "c",
-            "texto": "Sesgo de novedad: considera mejor cualquier propuesta reciente."
-          },
-          {
-            "id": "d",
-            "texto": "Evaluación equilibrada: contrasta los testimonios de estudiantes y familias antes de decidir."
-          }
-        ],
-        "respuestaCorrecta": "b",
-        "retroalimentacionCorrecta": "Selecciona la información por su coincidencia con su postura previa, no por su calidad: sesgo de confirmación. También aparece una apelación a la mayoría al afirmar que el acuerdo de los vecinos demuestra que tiene razón; son problemas distintos.",
-        "retroalimentacionIncorrecta": "Observa qué conserva y qué descarta. No acepta el informe por su autoridad ni favorece lo nuevo: evita examinar información contraria. La pregunta se refiere a esa selección, no al número de vecinos.",
-        "pista": "¿Selecciona las fuentes por su calidad o porque confirman su opinión?",
-        "puntos": 20
-      },
-      {
-        "id": "c3p5",
-        "enunciado": "A partir de cómo el autor trata las fuentes, ¿qué cambio permitiría evaluar con mayor rigor la propuesta?",
-        "tipo": "opcion-multiple",
-        "opciones": [
-          {
-            "id": "a",
-            "texto": "Buscar más vecinos que compartan su postura para aumentar el respaldo popular."
-          },
-          {
-            "id": "b",
-            "texto": "Examinar también el informe y los testimonios contrarios, y contrastar sus evidencias con las necesidades de transporte."
-          },
-          {
-            "id": "c",
-            "texto": "Descartar cualquier preocupación de las familias porque la carta contiene falacias."
-          },
-          {
-            "id": "d",
-            "texto": "Aceptar la propuesta automáticamente porque el concejal la presentó."
-          }
-        ],
-        "respuestaCorrecta": "b",
-        "retroalimentacionCorrecta": "Se infiere de las fuentes excluidas y de los recorridos no consultados que falta contrastar evidencias. Una preocupación por el transporte puede ser legítima aunque otras razones de la carta sean falaces.",
-        "retroalimentacionIncorrecta": "Ni el respaldo popular ni el cargo de quien propone sustituyen el contraste de pruebas. Detectar falacias tampoco obliga a rechazar toda preocupación del autor. Relaciona sus omisiones con lo que aún habría que investigar.",
-        "pista": "Reúne dos indicios: las fuentes que no leyó y la información que admite no haber consultado.",
-        "puntos": 20
-      }
-    ],
-    "insignia": {
-      "id": "inspector",
-      "nombre": "Inspector",
-      "descripcion": "Descubres inferencias y falacias con ojo crítico.",
-      "casoRequerido": 3
-    },
-    "veredicto": {
-      "id": "c3-veredicto",
-      "enunciado": "Escribe de 80 a 120 palabras tu veredicto sobre la carta del horario escolar. Explica si sus razones te convencen, señala dos problemas del razonamiento y reconoce una preocupación legítima del autor.",
-      "tipo": "abierta",
-      "opciones": [],
-      "respuestaCorrecta": null,
-      "retroalimentacionCorrecta": "Tu postura y tu autoevaluación quedaron registradas. Revisa cómo conectaste tus razones con las evidencias del texto.",
-      "retroalimentacionIncorrecta": "Tu postura quedó registrada. Usa los criterios de la rúbrica para decidir qué mejorar en una próxima versión.",
-      "pista": "Presenta tu tesis, dos razones y una objeción; cierra con una conclusión que se apoye en el texto.",
-      "puntos": 20,
-      "minPalabras": 80,
-      "maxPalabras": 120,
-      "rubrica": [
-        {
-          "criterio": "Tesis clara",
-          "descripcion": "Se entiende de inmediato cuál es mi postura.",
-          "puntos": 5
-        },
-        {
-          "criterio": "Argumentos",
-          "descripcion": "Incluyo al menos dos razones diferentes que apoyan mi tesis.",
-          "puntos": 5
-        },
-        {
-          "criterio": "Punto de vista contrario",
-          "descripcion": "Reconozco una objeción y respondo a ella.",
-          "puntos": 5
-        },
-        {
-          "criterio": "Coherencia y escritura",
-          "descripcion": "Uso conectores, mi texto es claro y cuido la ortografía.",
-          "puntos": 5
-        }
-      ]
-    },
-    "retroalimentacionFinal": {
-      "logrado": "Distinguiste ataques personales, cadenas sin prueba, falsos dilemas y selección sesgada de información. Una conclusión debe evaluarse con evidencias, incluso cuando quien la defiende razona mal.",
-      "reforzar": "Vincula cada problema con una frase de la carta. Diferencia el error de razonamiento del sesgo al seleccionar fuentes y apoya las inferencias en al menos dos indicios.",
-      "pendiente": "Tu investigación sigue abierta. Completa las preguntas y revisa tu postura con la rúbrica.",
-      "sinIniciar": "Todavía no has examinado este expediente. Empieza por su título, su fuente y su propósito."
-    }
-  },
-  {
-    "id": 4,
-    "titulo": "El veredicto final",
-    "nivel": 4,
-    "dificultad": "Alta",
-    "objetivo": "Valorar la pertinencia y suficiencia de las evidencias, identificar una refutación débil y defender una postura propia con razones, una objeción y una respuesta.",
-    "introduccion": "Es hora del veredicto. Evalúa la calidad de un texto polémico y luego defiende tu propia postura.",
-    "texto": {
-      "titulo": "Menores de 16 años, fuera de las redes sociales",
-      "autor": "Texto original redactado con asistencia de IA para Detectives del Texto",
-      "fuente": "Elaboración original para este RED; editorial polémico ficticio. Las referencias imprecisas y las afirmaciones del personaje se incluyen para evaluar su respaldo; no constituyen evidencia científica ni una norma vigente.",
-      "licencia": "CC BY-NC-SA 4.0",
-      "tipo": "Editorial argumentativo",
-      "contenido": "La adolescencia es una etapa en la que la opinión de los demás pesa más que nunca. Poner a un joven de catorce años frente a una pantalla donde todo se mide en «me gusta» es exponerlo a una presión constante.\n\nDiversos especialistas han advertido que el uso intensivo de redes sociales se relaciona con ansiedad y problemas de sueño. Algunos países ya han tomado medidas para limitar el acceso de los menores, lo que demuestra que prohibir es posible.\n\nLos defensores de la libertad digital dicen que la medida sería imposible de controlar, pero que algo sea difícil no lo hace injusto. Además, quien se opone, en el fondo, no piensa en el bienestar de los jóvenes sino en el negocio de las plataformas.\n\nEs hora de que los adultos asumamos nuestra responsabilidad: los menores de 16 años deben quedar fuera de las redes sociales."
-    },
-    "pistas": [
-      "Valorar un texto es evaluar si sus argumentos están bien sustentados, no solo si estás de acuerdo.",
-      "Puedes estar de acuerdo con una tesis y, aun así, notar que un argumento es débil.",
-      "Que una política exista en otro lugar no prueba su eficacia. Una relación entre variables tampoco basta para demostrar causalidad."
-    ],
-    "preguntas": [
-      {
-        "id": "c4p1",
-        "enunciado": "El autor usa la presión por los «me gusta» para concluir que todos los menores de 16 años deben quedar fuera de las redes. ¿Cuál es la valoración más rigurosa de ese paso?",
-        "tipo": "opcion-multiple",
-        "opciones": [
-          {
-            "id": "a",
-            "texto": "La preocupación es pertinente, pero no basta para justificar esa medida para todos: faltan pruebas de su eficacia y comparación con alternativas."
-          },
-          {
-            "id": "b",
-            "texto": "La preocupación demuestra que una prohibición total resolvería cualquier problema adolescente."
-          },
-          {
-            "id": "c",
-            "texto": "El argumento carece de pertinencia porque la presión social no tiene relación con el tema del texto."
-          },
-          {
-            "id": "d",
-            "texto": "El argumento queda demostrado porque la recomendación aparece al final del editorial."
-          }
-        ],
-        "respuestaCorrecta": "a",
-        "retroalimentacionCorrecta": "La presión social se relaciona con el tema, pero de ella no se deduce por sí sola que la prohibición sea la medida más eficaz. Deben compararse efectos, límites y alternativas: pertinencia no equivale a suficiencia.",
-        "retroalimentacionIncorrecta": "Distingue si la razón se relaciona con el tema de si alcanza para justificar la medida. La ubicación de una conclusión y la intensidad de una preocupación no demuestran su eficacia.",
-        "pista": "¿El autor muestra que su solución funciona mejor que otras o solo describe un riesgo?",
-        "puntos": 20
-      },
-      {
-        "id": "c4p2",
-        "enunciado": "«Diversos especialistas han advertido que el uso intensivo de redes se relaciona con ansiedad…». ¿Cuál es la principal debilidad de este argumento?",
-        "tipo": "opcion-multiple",
-        "opciones": [
-          {
-            "id": "a",
-            "texto": "No cita especialistas, estudios ni fuentes concretas."
-          },
-          {
-            "id": "b",
-            "texto": "Es demasiado corto."
-          },
-          {
-            "id": "c",
-            "texto": "Habla de la ansiedad."
-          },
-          {
-            "id": "d",
-            "texto": "Usa la palabra «especialistas»."
-          }
-        ],
-        "respuestaCorrecta": "a",
-        "retroalimentacionCorrecta": "La referencia no identifica especialistas ni estudios: el lector no puede examinar métodos o resultados. Además, una relación entre variables no demuestra por sí sola que una cause la otra.",
-        "retroalimentacionIncorrecta": "Pregúntate: ¿puedes comprobar quiénes son esos especialistas o qué estudio los respalda?",
-        "pista": "Un buen argumento de autoridad nombra la fuente.",
-        "puntos": 20
-      },
-      {
-        "id": "c4p3",
-        "enunciado": "«Quien se opone, en el fondo, no piensa en el bienestar de los jóvenes sino en el negocio de las plataformas». Esta frase:",
-        "tipo": "opcion-multiple",
-        "opciones": [
-          {
-            "id": "a",
-            "texto": "Refuta con datos el argumento contrario."
-          },
-          {
-            "id": "b",
-            "texto": "Ataca las supuestas intenciones de quienes se oponen en lugar de responder a sus razones."
-          },
-          {
-            "id": "c",
-            "texto": "Presenta una definición clara."
-          },
-          {
-            "id": "d",
-            "texto": "Aporta un ejemplo concreto."
-          }
-        ],
-        "respuestaCorrecta": "b",
-        "retroalimentacionCorrecta": "Es un ataque a las supuestas motivaciones de los opositores (ad hominem circunstancial). No responde a su objeción sobre el control de la medida ni demuestra que todos busquen beneficiar a las plataformas.",
-        "retroalimentacionIncorrecta": "La frase no responde al argumento de los opositores; los juzga por sus supuestas intenciones.",
-        "pista": "¿El autor responde a lo que dicen los opositores o a lo que supone que piensan?",
-        "puntos": 20
-      },
-      {
-        "id": "c4p4",
-        "enunciado": "¿Qué información adicional permitiría valorar mejor si la prohibición propuesta protege a los menores?",
-        "tipo": "opcion-multiple",
-        "opciones": [
-          {
-            "id": "a",
-            "texto": "El número de personas que comparten el editorial, sin información sobre sus resultados."
-          },
-          {
-            "id": "b",
-            "texto": "Estudios identificables que comparen la restricción con otras medidas, describan sus métodos y examinen efectos, límites y posibles costos."
-          },
-          {
-            "id": "c",
-            "texto": "Una lista de países que adoptaron medidas, sin comprobar su eficacia ni las diferencias de contexto."
-          },
-          {
-            "id": "d",
-            "texto": "Testimonios seleccionados solo entre quienes ya apoyan la prohibición."
-          }
-        ],
-        "respuestaCorrecta": "b",
-        "retroalimentacionCorrecta": "Comparar medidas y examinar métodos, resultados y límites permite evaluar la recomendación. Adoptar una política en otro lugar prueba que se intentó, pero no basta para demostrar que funciona aquí.",
-        "retroalimentacionIncorrecta": "La popularidad, la adopción en otros países y testimonios seleccionados no sustituyen la evaluación de resultados. Se requieren evidencias que permitan comparar la medida con alternativas y reconocer sus límites.",
-        "pista": "Distingue que una medida se pueda adoptar de que produzca el beneficio que promete.",
-        "puntos": 20
-      },
-      {
-        "id": "c4p5",
-        "enunciado": "Escribe de 80 a 120 palabras tu postura sobre excluir de las redes sociales a los menores de 16 años. Puedes apoyar, rechazar o matizar la propuesta. Formula una tesis, desarrolla dos razones vinculadas al texto, señala una limitación de sus evidencias y responde a una objeción. No inventes estudios ni cifras.",
-        "tipo": "abierta",
-        "opciones": [],
-        "respuestaCorrecta": null,
-        "retroalimentacionCorrecta": "Tu postura y tu autoevaluación quedaron registradas. El puntaje refleja los criterios que marcaste, no si coincides con el editorial. Una tesis a favor, en contra o matizada puede estar bien argumentada; revisa sus evidencias con tu docente.",
-        "retroalimentacionIncorrecta": "Tu postura quedó registrada. Revisa los criterios que aún no cumples: explicita tu tesis, relaciona dos razones con el texto, reconoce una limitación de las pruebas y responde a una objeción. El sistema no juzga automáticamente la calidad de tu escrito.",
-        "pista": "Organiza tesis → dos razones conectadas con fragmentos del editorial → límite de sus pruebas → objeción y respuesta. Diferencia una afirmación del autor de un hecho demostrado.",
-        "puntos": 20,
-        "rubrica": [
-          {
-            "criterio": "Tesis propia",
-            "descripcion": "Defiendo con claridad una postura a favor, en contra o matizada sobre la medida; no me limito a resumir el editorial.",
-            "puntos": 5
-          },
-          {
-            "criterio": "Razones y lectura crítica",
-            "descripcion": "Desarrollo dos razones distintas vinculadas al texto y señalo una limitación de sus pruebas, sin inventar datos ni presentar sus afirmaciones como hechos demostrados.",
-            "puntos": 5
-          },
-          {
-            "criterio": "Objeción y respuesta",
-            "descripcion": "Reconozco una objeción razonable a mi postura y respondo a sus razones, sin atacar a quien la sostiene.",
-            "puntos": 5
-          },
-          {
-            "criterio": "Coherencia y escritura",
-            "descripcion": "Conecto tesis, razones y cierre con claridad; cuido la ortografía y mantengo la extensión indicada.",
-            "puntos": 5
-          }
-        ],
-        "minPalabras": 80,
-        "maxPalabras": 120
-      }
-    ],
-    "insignia": {
-      "id": "maestro",
-      "nombre": "Maestro del Veredicto",
-      "descripcion": "Defiendes tu postura con argumentos sólidos.",
-      "casoRequerido": 4
-    },
-    "veredicto": {
-      "id": "c4p5",
-      "enunciado": "Escribe de 80 a 120 palabras tu postura sobre excluir de las redes sociales a los menores de 16 años. Puedes apoyar, rechazar o matizar la propuesta. Formula una tesis, desarrolla dos razones vinculadas al texto, señala una limitación de sus evidencias y responde a una objeción. No inventes estudios ni cifras.",
-      "tipo": "abierta",
-      "opciones": [],
-      "respuestaCorrecta": null,
-      "retroalimentacionCorrecta": "Tu postura y tu autoevaluación quedaron registradas. El puntaje refleja los criterios que marcaste, no si coincides con el editorial. Una tesis a favor, en contra o matizada puede estar bien argumentada; revisa sus evidencias con tu docente.",
-      "retroalimentacionIncorrecta": "Tu postura quedó registrada. Revisa los criterios que aún no cumples: explicita tu tesis, relaciona dos razones con el texto, reconoce una limitación de las pruebas y responde a una objeción. El sistema no juzga automáticamente la calidad de tu escrito.",
-      "pista": "Organiza tesis → dos razones conectadas con fragmentos del editorial → límite de sus pruebas → objeción y respuesta. Diferencia una afirmación del autor de un hecho demostrado.",
-      "puntos": 20,
-      "rubrica": [
-        {
-          "criterio": "Tesis propia",
-          "descripcion": "Defiendo con claridad una postura a favor, en contra o matizada sobre la medida; no me limito a resumir el editorial.",
-          "puntos": 5
-        },
-        {
-          "criterio": "Razones y lectura crítica",
-          "descripcion": "Desarrollo dos razones distintas vinculadas al texto y señalo una limitación de sus pruebas, sin inventar datos ni presentar sus afirmaciones como hechos demostrados.",
-          "puntos": 5
-        },
-        {
-          "criterio": "Objeción y respuesta",
-          "descripcion": "Reconozco una objeción razonable a mi postura y respondo a sus razones, sin atacar a quien la sostiene.",
-          "puntos": 5
-        },
-        {
-          "criterio": "Coherencia y escritura",
-          "descripcion": "Conecto tesis, razones y cierre con claridad; cuido la ortografía y mantengo la extensión indicada.",
-          "puntos": 5
-        }
+      "glosario": [
+        { "palabra": "caña", "significado": "Aguardiente destilado de la caña de azúcar." },
+        { "palabra": "picada", "significado": "Sendero estrecho abierto en la selva." },
+        { "palabra": "trapiche", "significado": "Molino para extraer el jugo de la caña de azúcar." },
+        { "palabra": "damajuana", "significado": "Botella grande y panzuda, garrafa." },
+        { "palabra": "compadre", "significado": "Amigo cercano o vecino de confianza." },
+        { "palabra": "obraje", "significado": "Lugar de trabajo donde se explota la madera." }
       ],
-      "minPalabras": 80,
-      "maxPalabras": 120
+      "pistas": [
+        "Un cuento tiene un tema (la idea profunda) y una trama (lo que ocurre). No son lo mismo.",
+        "Fíjate en cómo cambian las sensaciones del hombre y cómo es el paisaje a su alrededor."
+      ],
+      "preguntas": [
+        {
+          "id": "c1p1",
+          "enunciado": "¿Cuál es el tema central del cuento?",
+          "tipo": "opcion-multiple",
+          "opciones": [
+            { "id": "a", "texto": "La lucha del ser humano por sobrevivir frente a la fuerza de la naturaleza y la muerte." },
+            { "id": "b", "texto": "La enemistad entre dos compadres." },
+            { "id": "c", "texto": "La belleza de los paisajes del río Paraná." },
+            { "id": "d", "texto": "La vida cotidiana de una pareja en la selva." }
+          ],
+          "respuestaCorrecta": "a",
+          "retroalimentacionCorrecta": "¡Buen rastro! El tema es lo que da sentido a todo el relato: un hombre lucha por vivir y no puede vencer.",
+          "retroalimentacionIncorrecta": "Esa opción es un detalle de la historia, no la idea profunda. Pregúntate qué es lo que mueve al personaje en todo el cuento.",
+          "pista": "El hombre «no quería morir». ¿Contra qué lucha?",
+          "puntos": 20
+        },
+        {
+          "id": "c1p2",
+          "enunciado": "¿Qué tipo de narrador tiene el cuento?",
+          "tipo": "opcion-multiple",
+          "opciones": [
+            { "id": "a", "texto": "Narrador en primera persona: el propio hombre cuenta lo que le pasa." },
+            { "id": "b", "texto": "Narrador en tercera persona: alguien externo cuenta los hechos y conoce lo que siente el personaje." },
+            { "id": "c", "texto": "Narrador protagonista que habla con el lector." },
+            { "id": "d", "texto": "No hay narrador, solo diálogos." }
+          ],
+          "respuestaCorrecta": "b",
+          "retroalimentacionCorrecta": "Correcto. Se dice «el hombre pisó», «el hombre pensó»: una voz externa nos cuenta la historia.",
+          "retroalimentacionIncorrecta": "Fíjate en cómo se refiere el texto al personaje: ¿dice «yo» o dice «el hombre»?",
+          "pista": "Observa los verbos: «pisó», «sintió», «pensó».",
+          "puntos": 20
+        },
+        {
+          "id": "c1p3",
+          "enunciado": "¿Por qué el hombre decide subir a su canoa y bajar por el río?",
+          "tipo": "opcion-multiple",
+          "opciones": [
+            { "id": "a", "texto": "Porque quería pescar antes del anochecer." },
+            { "id": "b", "texto": "Porque su mujer se lo ordenó." },
+            { "id": "c", "texto": "Porque necesitaba llegar a Tacurú-Pucú para recibir ayuda y salvarse." },
+            { "id": "d", "texto": "Porque quería escapar de la víbora." }
+          ],
+          "respuestaCorrecta": "c",
+          "retroalimentacionCorrecta": "¡Exacto! La corriente lo llevaría a Tacurú-Pucú en pocas horas: era su única esperanza.",
+          "retroalimentacionIncorrecta": "La razón está dicha en el texto: «no quería morir». Relee el párrafo en que sube a la canoa.",
+          "pista": "Busca el nombre del lugar al que quiere llegar.",
+          "puntos": 20
+        },
+        {
+          "id": "c1p4",
+          "enunciado": "El texto describe el paisaje así: «la eterna muralla lúgubre» y «reina en él un silencio de muerte». ¿Qué efecto tiene este ambiente en el relato?",
+          "tipo": "opcion-multiple",
+          "opciones": [
+            { "id": "a", "texto": "Muestra que el hombre está en un lugar seguro y tranquilo." },
+            { "id": "b", "texto": "Refuerza la soledad y la indefensión del hombre frente a una naturaleza imponente." },
+            { "id": "c", "texto": "Sirve solo para adornar el texto." },
+            { "id": "d", "texto": "Indica que el hombre ya recibió ayuda." }
+          ],
+          "respuestaCorrecta": "b",
+          "retroalimentacionCorrecta": "Muy bien. En un cuento, el ambiente no es adorno: acompaña y refuerza lo que siente el personaje.",
+          "retroalimentacionIncorrecta": "Piensa en palabras como «lúgubre», «negro» y «muerte»: ¿qué sensación transmiten?",
+          "pista": "Las palabras del paisaje dicen algo sobre el estado del hombre.",
+          "puntos": 20
+        },
+        {
+          "id": "c1p5",
+          "enunciado": "Hacia el final, el hombre «se sentía mejor» y dice que «el veneno comenzaba a irse». Luego «sintió que estaba helado hasta el pecho». ¿Qué se puede inferir?",
+          "tipo": "opcion-multiple",
+          "opciones": [
+            { "id": "a", "texto": "Que el hombre se está curando y llegará pronto al pueblo." },
+            { "id": "b", "texto": "Que la mejoría es engañosa: es una señal de que la muerte se acerca." },
+            { "id": "c", "texto": "Que el hombre dejó de sentir frío." },
+            { "id": "d", "texto": "Que el narrador quiere confundir al lector con un final feliz verdadero." }
+          ],
+          "respuestaCorrecta": "b",
+          "retroalimentacionCorrecta": "Excelente inferencia. Nada lo dice de forma directa, pero los detalles (el frío, la respiración, los recuerdos confusos) anuncian el final.",
+          "retroalimentacionIncorrecta": "Una inferencia se apoya en pistas. Fíjate en el frío en el pecho, la respiración y cómo se enredan sus recuerdos.",
+          "pista": "Mira las frases «helado hasta el pecho» y «Y la respiración…».",
+          "puntos": 20
+        }
+      ]
     },
-    "retroalimentacionFinal": {
-      "logrado": "Evaluaste el respaldo de una propuesta polémica y registraste una postura propia. La autoevaluación no sustituye la lectura de tu docente: comparte el texto y contrasta tus razones con posibles objeciones.",
-      "reforzar": "Distingue preocupación, evidencia y recomendación. Revisa qué pruebas faltan para justificar la medida y qué criterios de tu postura puedes fortalecer, independientemente de estar a favor o en contra.",
-      "pendiente": "Tu investigación sigue abierta. Completa las preguntas y revisa tu postura con la rúbrica.",
-      "sinIniciar": "Todavía no has examinado este expediente. Empieza por su título, su fuente y su propósito."
+    {
+      "id": 2,
+      "titulo": "El sospechoso oculto",
+      "nivel": 2,
+      "dificultad": "Media",
+      "objetivo": "Identificar la tesis, interpretar el lenguaje figurado y reconocer los argumentos de un ensayo.",
+      "introduccion": "Hace más de un siglo, alguien escribió un llamado urgente a todo un continente. Descubre qué defiende y con qué imágenes lo hace.",
+      "texto": {
+        "titulo": "Nuestra América (fragmento)",
+        "autor": "José Martí",
+        "anio": 1891,
+        "fuente": "Centro de Estudios Martianos — https://www.josemarti.cu/publicacion/nuestra-america/",
+        "licencia": "Dominio público",
+        "tipo": "Ensayo",
+        "contenido": "Cree el aldeano vanidoso que el mundo entero es su aldea, y con tal que él quede de alcalde, o le mortifique al rival que le quitó la novia, o le crezcan en la alcancía los ahorros, ya da por bueno el orden universal, sin saber de los gigantes que llevan siete leguas en las botas y le pueden poner la bota encima, ni de la pelea de los cometas en el cielo, que van por el aire dormidos engullendo mundos. Lo que quede de aldea en América ha de despertar. Estos tiempos no son para acostarse con el pañuelo a la cabeza, sino con las armas de almohada, como los varones de Juan de Castellanos: las armas del juicio, que vencen a las otras. Trincheras de ideas valen más que trincheras de piedra.\n\nNo hay proa que taje una nube de ideas. Una idea enérgica, flameada a tiempo ante el mundo, para, como la bandera mística del juicio final, a un escuadrón de acorazados. Los pueblos que no se conocen han de darse prisa para conocerse, como quienes van a pelear juntos.\n\n[…]\n\nEl desdén del vecino formidable, que no la conoce, es el peligro mayor de nuestra América; y urge, porque el día de la visita está próximo, que el vecino la conozca, la conozca pronto, para que no la desdeñe."
+      },
+      "glosario": [
+        { "palabra": "aldeano", "significado": "Habitante de una aldea; aquí, persona de visión estrecha." },
+        { "palabra": "proa", "significado": "Parte delantera de un barco." },
+        { "palabra": "taje", "significado": "Del verbo tajar: cortar." },
+        { "palabra": "acorazados", "significado": "Grandes barcos de guerra." },
+        { "palabra": "desdén", "significado": "Desprecio, indiferencia." }
+      ],
+      "pistas": [
+        "La tesis es la idea central que el autor defiende. Aquí aparece repartida en varias frases.",
+        "Martí usa muchas metáforas. Pregúntate qué quiere decir realmente cada imagen."
+      ],
+      "preguntas": [
+        {
+          "id": "c2p1",
+          "enunciado": "¿Cuál es la tesis principal del fragmento?",
+          "tipo": "opcion-multiple",
+          "opciones": [
+            { "id": "a", "texto": "América debe despertar, conocerse y defenderse con ideas propias frente a los peligros externos." },
+            { "id": "b", "texto": "América debe copiar los modelos de otros países para progresar." },
+            { "id": "c", "texto": "Las guerras son la mejor forma de resolver los conflictos." },
+            { "id": "d", "texto": "Los pueblos de América deben aislarse del resto del mundo." }
+          ],
+          "respuestaCorrecta": "a",
+          "retroalimentacionCorrecta": "¡Caso resuelto! La tesis reúne el llamado a despertar, a conocerse y a defenderse con las «armas del juicio».",
+          "retroalimentacionIncorrecta": "La tesis es la postura que el texto sostiene de principio a fin. Busca los verbos que usa para llamar a la acción: «despertar», «conocerse», «darse prisa».",
+          "pista": "Mira la frase «Lo que quede de aldea en América ha de despertar».",
+          "puntos": 20
+        },
+        {
+          "id": "c2p2",
+          "enunciado": "¿Qué representa el «aldeano vanidoso» que cree que «el mundo entero es su aldea»?",
+          "tipo": "opcion-multiple",
+          "opciones": [
+            { "id": "a", "texto": "A una persona que vive en el campo y es feliz." },
+            { "id": "b", "texto": "A quien tiene una visión estrecha y cree que solo existe su pequeño mundo, sin ver los peligros que lo rodean." },
+            { "id": "c", "texto": "A un alcalde justo que cuida a su pueblo." },
+            { "id": "d", "texto": "A un viajero que conoce muchos países." }
+          ],
+          "respuestaCorrecta": "b",
+          "retroalimentacionCorrecta": "Muy bien. Es una metáfora: el aldeano simboliza la mentalidad cerrada que ignora los «gigantes» que pueden aplastarla.",
+          "retroalimentacionIncorrecta": "No se habla de un campesino real. Es una imagen para criticar una forma de pensar: ¿cuál?",
+          "pista": "El aldeano está contento con lo suyo y «no sabe» de los gigantes.",
+          "puntos": 20
+        },
+        {
+          "id": "c2p3",
+          "enunciado": "¿Qué significa la frase «Trincheras de ideas valen más que trincheras de piedra»?",
+          "tipo": "opcion-multiple",
+          "opciones": [
+            { "id": "a", "texto": "Que conviene construir muros más altos para protegerse." },
+            { "id": "b", "texto": "Que las ideas y el pensamiento son una defensa más poderosa que las armas y los muros." },
+            { "id": "c", "texto": "Que las trincheras deben hacerse con ideas escritas en papel." },
+            { "id": "d", "texto": "Que no hace falta defenderse." }
+          ],
+          "respuestaCorrecta": "b",
+          "retroalimentacionCorrecta": "Correcto. Es una comparación: las ideas protegen mejor un pueblo que la piedra.",
+          "retroalimentacionIncorrecta": "Compara los dos términos: ¿qué defiende mejor según Martí, la piedra o las ideas?",
+          "pista": "Fíjate en cuál de las dos «vale más» según el autor.",
+          "puntos": 20
+        },
+        {
+          "id": "c2p4",
+          "enunciado": "Según el fragmento, ¿cuál es el «peligro mayor» de nuestra América?",
+          "tipo": "opcion-multiple",
+          "opciones": [
+            { "id": "a", "texto": "El desdén del vecino poderoso que no la conoce." },
+            { "id": "b", "texto": "La falta de armas y soldados." },
+            { "id": "c", "texto": "La pobreza de sus tierras." },
+            { "id": "d", "texto": "La cantidad de idiomas que se hablan." }
+          ],
+          "respuestaCorrecta": "a",
+          "retroalimentacionCorrecta": "¡Exacto! Por eso Martí dice que urge que el vecino conozca a América, para que no la desprecie.",
+          "retroalimentacionIncorrecta": "La respuesta está dicha de forma directa en el último párrafo. Relee la frase que empieza con «El desdén…».",
+          "pista": "Busca la expresión «peligro mayor» en el texto.",
+          "puntos": 20
+        },
+        {
+          "id": "c2p5",
+          "enunciado": "Verdadero o falso: según Martí, los pueblos de América pueden esperar con calma a conocerse entre sí.",
+          "tipo": "verdadero-falso",
+          "opciones": [
+            { "id": "v", "texto": "Verdadero" },
+            { "id": "f", "texto": "Falso" }
+          ],
+          "respuestaCorrecta": "f",
+          "retroalimentacionCorrecta": "Bien. El autor dice que «han de darse prisa para conocerse».",
+          "retroalimentacionIncorrecta": "Revisa el segundo párrafo: Martí insiste en la urgencia, no en la calma.",
+          "pista": "Busca la expresión «darse prisa».",
+          "puntos": 20
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "titulo": "¿Quién miente?",
+      "nivel": 3,
+      "dificultad": "Media-alta",
+      "objetivo": "Detectar falacias, sesgos e inferir la postura implícita del autor.",
+      "introduccion": "Este texto suena convincente, pero algo no cuadra. Hay razonamientos tramposos escondidos. Encuéntralos.",
+      "texto": {
+        "titulo": "Carta al director: no al nuevo horario escolar",
+        "autor": "Elaboración propia del grupo (personajes y hechos ficticios)",
+        "anio": 2026,
+        "fuente": "Elaboración propia del grupo",
+        "licencia": "CC BY-NC-SA 4.0",
+        "tipo": "Carta de opinión",
+        "contenido": "Señor director:\n\nEl concejal Ramírez propone que los colegios empiecen las clases a las 8:00 a. m. en lugar de las 6:30. Pero ¿qué podemos esperar de alguien que nunca ha trabajado como docente? Su propuesta no merece ser escuchada.\n\nAdemás, si les damos a los jóvenes una hora más de sueño, mañana querrán que las clases empiecen al mediodía y pasado mañana no querrán estudiar. Los jóvenes de hoy son perezosos y siempre piden más.\n\nTampoco hay más opciones: o mantenemos el horario de siempre o destruimos la disciplina de nuestros colegios.\n\nPor último, tres de cada cuatro vecinos de mi barrio piensan igual que yo, así que es evidente que tengo la razón.\n\nAtentamente,\nUn padre preocupado"
+      },
+      "glosario": [],
+      "pistas": [
+        "Una falacia es un razonamiento que parece válido pero no lo es.",
+        "Pregúntate si el autor responde al argumento o ataca a la persona, exagera consecuencias o reduce todo a dos opciones."
+      ],
+      "preguntas": [
+        {
+          "id": "c3p1",
+          "enunciado": "La frase «¿qué podemos esperar de alguien que nunca ha trabajado como docente?» es una falacia de tipo:",
+          "tipo": "opcion-multiple",
+          "opciones": [
+            { "id": "a", "texto": "Ataque a la persona (ad hominem)" },
+            { "id": "b", "texto": "Pendiente resbaladiza" },
+            { "id": "c", "texto": "Falso dilema" },
+            { "id": "d", "texto": "Apelación a la mayoría" }
+          ],
+          "respuestaCorrecta": "a",
+          "retroalimentacionCorrecta": "¡Atrapado! Desacredita a la persona en lugar de refutar su propuesta.",
+          "retroalimentacionIncorrecta": "Observa a quién ataca el autor: a la persona, no a la idea.",
+          "pista": "¿El autor discute la propuesta o a quien la hizo?",
+          "puntos": 20
+        },
+        {
+          "id": "c3p2",
+          "enunciado": "«Si les damos una hora más de sueño, mañana querrán que las clases empiecen al mediodía y pasado mañana no querrán estudiar» es una falacia de tipo:",
+          "tipo": "opcion-multiple",
+          "opciones": [
+            { "id": "a", "texto": "Ataque a la persona" },
+            { "id": "b", "texto": "Pendiente resbaladiza: anuncia una cadena de consecuencias sin demostrarla." },
+            { "id": "c", "texto": "Apelación a la autoridad" },
+            { "id": "d", "texto": "Argumento válido" }
+          ],
+          "respuestaCorrecta": "b",
+          "retroalimentacionCorrecta": "Correcto. Pasa de un cambio pequeño a un desastre sin pruebas intermedias.",
+          "retroalimentacionIncorrecta": "El autor encadena consecuencias cada vez más exageradas sin demostrar que ocurrirán.",
+          "pista": "Mira cómo crece la consecuencia: «mañana… pasado mañana…».",
+          "puntos": 20
+        },
+        {
+          "id": "c3p3",
+          "enunciado": "«O mantenemos el horario de siempre o destruimos la disciplina» es un:",
+          "tipo": "opcion-multiple",
+          "opciones": [
+            { "id": "a", "texto": "Argumento basado en datos" },
+            { "id": "b", "texto": "Falso dilema: presenta solo dos opciones cuando existen más." },
+            { "id": "c", "texto": "Contraargumento" },
+            { "id": "d", "texto": "Ejemplo" }
+          ],
+          "respuestaCorrecta": "b",
+          "retroalimentacionCorrecta": "Muy bien. Hay horarios intermedios y otras soluciones que el autor ignora.",
+          "retroalimentacionIncorrecta": "El autor reduce la situación a solo dos extremos. ¿Existen otras posibilidades?",
+          "pista": "Cuenta cuántas opciones plantea el autor.",
+          "puntos": 20
+        },
+        {
+          "id": "c3p4",
+          "enunciado": "«Tres de cada cuatro vecinos de mi barrio piensan igual que yo, así que es evidente que tengo la razón» es una falacia porque:",
+          "tipo": "opcion-multiple",
+          "opciones": [
+            { "id": "a", "texto": "Usa datos exactos y verificables." },
+            { "id": "b", "texto": "Supone que algo es cierto solo porque muchos lo creen." },
+            { "id": "c", "texto": "Ataca al concejal." },
+            { "id": "d", "texto": "Ofrece una definición." }
+          ],
+          "respuestaCorrecta": "b",
+          "retroalimentacionCorrecta": "Exacto. Que muchos piensen algo no lo vuelve verdadero (apelación a la mayoría).",
+          "retroalimentacionIncorrecta": "La cantidad de personas que opinan igual no prueba que la idea sea correcta.",
+          "pista": "¿Popular es lo mismo que verdadero?",
+          "puntos": 20
+        },
+        {
+          "id": "c3p5",
+          "enunciado": "¿Qué se puede inferir del texto sobre el autor?",
+          "tipo": "opcion-multiple",
+          "opciones": [
+            { "id": "a", "texto": "Analizó estudios científicos sobre el sueño adolescente." },
+            { "id": "b", "texto": "Se opone al cambio de horario y desconfía del concejal." },
+            { "id": "c", "texto": "Es estudiante de grado 11." },
+            { "id": "d", "texto": "No tiene una opinión definida." }
+          ],
+          "respuestaCorrecta": "b",
+          "retroalimentacionCorrecta": "Excelente inferencia: nunca lo dice literalmente, pero todo su lenguaje lo deja ver.",
+          "retroalimentacionIncorrecta": "Una inferencia debe apoyarse en pistas del texto. Revisa cómo habla del concejal y del horario.",
+          "pista": "Una inferencia es una conclusión que sacas de pistas, no de lo que está dicho literalmente.",
+          "puntos": 20
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "titulo": "El veredicto final",
+      "nivel": 4,
+      "dificultad": "Alta",
+      "objetivo": "Valorar críticamente un texto histórico, reconocer su estructura argumentativa y defender una postura propia.",
+      "introduccion": "Es hora del veredicto. Un texto histórico de 1815 te espera: evalúa cómo argumenta su autor y luego defiende tu propia postura.",
+      "contexto": "Simón Bolívar escribió esta carta en Kingston (Jamaica), el 6 de septiembre de 1815, donde se había refugiado tras un revés militar. Respondía a las preguntas de Henry Cullen, un comerciante británico interesado en la suerte de América, de quien esperaba comprensión y apoyo para la causa independentista.",
+      "texto": {
+        "titulo": "Carta de Jamaica (fragmento)",
+        "autor": "Simón Bolívar",
+        "anio": 1815,
+        "fuente": "dipublico.org — https://www.dipublico.org/111224/carta-de-jamaica-de-simon-bolivar-fechada-el-6-de-septiembre-de-1815/",
+        "licencia": "Dominio público",
+        "tipo": "Carta de carácter argumentativo",
+        "contenido": "Yo deseo más que otro alguno ver formar en América la más grande nación del mundo, menos por su extensión y riquezas que por su libertad y gloria. Aunque aspiro a la perfección del gobierno de mi patria, no puedo persuadirme que el Nuevo Mundo sea por el momento regido por una gran república; como es imposible, no me atrevo a desearlo; y menos deseo aún una monarquía universal de América, porque este proyecto sin ser útil, es también imposible.\n\n[…]\n\nEs una idea grandiosa pretender formar de todo el mundo nuevo una sola nación con un solo vínculo que ligue sus partes entre sí y con el todo. Ya que tiene un origen, una lengua, unas costumbres y una religión debería, por consiguiente, tener un solo gobierno que confederase los diferentes Estados que hayan de formarse; mas no es posible porque climas remotos, situaciones diversas, intereses opuestos, caracteres desemejantes dividen a la América. ¡Qué bello sería que el istmo de Panamá fuese para nosotros lo que el de Corinto para los griegos! Ojalá que algún día tengamos la fortuna de instalar allí un augusto Congreso de los representantes de las repúblicas, reinos e imperios a tratar y discutir sobre los altos intereses de la paz y de la guerra, con las naciones de las otras tres partes del mundo."
+      },
+      "glosario": [
+        { "palabra": "mas", "significado": "Conjunción que equivale a «pero» (sin tilde)." },
+        { "palabra": "confederase", "significado": "Uniese varios Estados en una confederación." },
+        { "palabra": "desemejantes", "significado": "Distintos, diferentes." },
+        { "palabra": "augusto", "significado": "Respetable, de gran dignidad." },
+        { "palabra": "istmo", "significado": "Franja estrecha de tierra que une dos extensiones mayores." }
+      ],
+      "pistas": [
+        "Valorar un texto es evaluar si sus razones están bien sustentadas y en qué contexto fue escrito, no solo si estás de acuerdo.",
+        "Puedes estar de acuerdo con una postura y aun así notar el contexto y la intención con que fue escrita."
+      ],
+      "preguntas": [
+        {
+          "id": "c4p1",
+          "enunciado": "¿Cuál es la postura de Bolívar en este fragmento?",
+          "tipo": "opcion-multiple",
+          "opciones": [
+            { "id": "a", "texto": "Desea una gran nación americana unida, pero cree que por ahora no es posible reunirla bajo un solo gobierno." },
+            { "id": "b", "texto": "Rechaza por completo la idea de que América tenga una identidad común." },
+            { "id": "c", "texto": "Propone formar de inmediato una monarquía universal en América." },
+            { "id": "d", "texto": "Afirma que América debe volver a depender de España." }
+          ],
+          "respuestaCorrecta": "a",
+          "retroalimentacionCorrecta": "Correcto. Bolívar combina un ideal («deseo… la más grande nación del mundo») con un juicio realista («no es posible»).",
+          "retroalimentacionIncorrecta": "Lee con atención el primer párrafo: ¿qué desea y qué considera imposible?",
+          "pista": "Busca los verbos «deseo» y «es imposible».",
+          "puntos": 20
+        },
+        {
+          "id": "c4p2",
+          "enunciado": "Según el texto, ¿qué razones da Bolívar para decir que un solo gobierno para toda América no es posible?",
+          "tipo": "opcion-multiple",
+          "opciones": [
+            { "id": "a", "texto": "Los climas remotos, las situaciones diversas, los intereses opuestos y los caracteres desemejantes." },
+            { "id": "b", "texto": "La falta de una lengua común entre los pueblos americanos." },
+            { "id": "c", "texto": "La oposición de la Iglesia." },
+            { "id": "d", "texto": "El miedo a perder el comercio con Europa." }
+          ],
+          "respuestaCorrecta": "a",
+          "retroalimentacionCorrecta": "¡Exacto! Son los argumentos que sostienen su objeción. Ojo: sí reconoce que comparten lengua, origen, costumbres y religión.",
+          "retroalimentacionIncorrecta": "Busca la frase que empieza con «mas no es posible porque…»: allí están sus razones. Y fíjate que el texto dice que SÍ comparten lengua.",
+          "pista": "Las razones aparecen enumeradas después de «porque».",
+          "puntos": 20
+        },
+        {
+          "id": "c4p3",
+          "enunciado": "En la frase «…debería tener un solo gobierno…; mas no es posible porque…», la palabra «mas» (sin tilde) cumple la función de:",
+          "tipo": "opcion-multiple",
+          "opciones": [
+            { "id": "a", "texto": "Indicar cantidad, como en «más grande»." },
+            { "id": "b", "texto": "Introducir una objeción, con el sentido de «pero»." },
+            { "id": "c", "texto": "Repetir la tesis anterior." },
+            { "id": "d", "texto": "Dar un ejemplo." }
+          ],
+          "respuestaCorrecta": "b",
+          "retroalimentacionCorrecta": "Muy bien. Bolívar reconoce las razones a favor de la unidad y luego introduce su contraargumento con «mas».",
+          "retroalimentacionIncorrecta": "Sin tilde, «mas» no suma cantidad: es una conjunción adversativa. Prueba a reemplazarla por «pero» y mira si el sentido se mantiene.",
+          "pista": "Reemplaza «mas» por «pero» y relee la frase.",
+          "puntos": 20
+        },
+        {
+          "id": "c4p4",
+          "enunciado": "Bolívar escribió este texto en 1815, refugiado en Jamaica, para responder a un comerciante británico. ¿Qué debe tener en cuenta un lector crítico al valorarlo?",
+          "tipo": "opcion-multiple",
+          "opciones": [
+            { "id": "a", "texto": "Que es un texto de su época, escrito en una situación concreta y con la intención de explicar la causa americana a un posible aliado." },
+            { "id": "b", "texto": "Que es una ley vigente que debe cumplirse hoy." },
+            { "id": "c", "texto": "Que es un estudio científico basado en estadísticas actuales." },
+            { "id": "d", "texto": "Que no importa cuándo fue escrito, porque el contexto nunca influye en un texto." }
+          ],
+          "respuestaCorrecta": "a",
+          "retroalimentacionCorrecta": "Excelente. Valorar críticamente implica leer el texto en su contexto: quién escribe, a quién, cuándo y con qué propósito.",
+          "retroalimentacionIncorrecta": "Un lector crítico se pregunta quién escribe, a quién, cuándo y para qué. Relee el contexto que aparece al inicio del caso.",
+          "pista": "Piensa en las preguntas: ¿quién escribe?, ¿a quién?, ¿en qué situación?, ¿para qué?",
+          "puntos": 20
+        },
+        {
+          "id": "c4p5",
+          "enunciado": "Bolívar deseaba una América unida, aunque pensaba que era difícil. Escribe un párrafo de 80 a 120 palabras en el que defiendas TU postura sobre si hoy los países de América Latina deberían buscar mayor unión. Incluye una tesis clara, al menos dos argumentos y reconoce un punto de vista contrario.",
+          "tipo": "abierta",
+          "opciones": [],
+          "respuestaCorrecta": null,
+          "retroalimentacionCorrecta": "Tu veredicto está registrado. Autoevalúate con la rúbrica.",
+          "retroalimentacionIncorrecta": "Tu veredicto está registrado. Autoevalúate con la rúbrica.",
+          "pista": "Estructura sugerida: tesis → argumento 1 → argumento 2 → «Es cierto que…, sin embargo…» → cierre.",
+          "puntos": 20,
+          "rubrica": [
+            { "criterio": "Tesis clara", "descripcion": "Se entiende de inmediato cuál es mi postura.", "puntos": 5 },
+            { "criterio": "Argumentos", "descripcion": "Incluyo al menos dos razones diferentes que apoyan mi tesis.", "puntos": 5 },
+            { "criterio": "Punto de vista contrario", "descripcion": "Reconozco una objeción y respondo a ella.", "puntos": 5 },
+            { "criterio": "Coherencia y escritura", "descripcion": "Uso conectores, mi texto es claro y cuido la ortografía.", "puntos": 5 }
+          ]
+        }
+      ]
     }
-  }
-]
+  ]
+}
