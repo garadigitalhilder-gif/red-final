@@ -7,6 +7,11 @@
     "pie": "Lee con atención. Encuentra evidencias. Construye tu postura."
   },
   "inicio": {
+    "presentacion": {
+      "titulo": "Presentación del grupo",
+      "grupo": "Mentes Digitales",
+      "autor": "Juan Junior Mendoza Tasco"
+    },
     "etiqueta": "AGENCIA DE LECTURA CRÍTICA",
     "titulo": "Todo texto esconde pistas.",
     "descripcion": "Conviértete en detective: examina las ideas, cuestiona los argumentos y descubre lo que hay detrás de las palabras.",

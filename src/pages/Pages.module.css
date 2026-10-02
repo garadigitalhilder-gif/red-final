@@ -20,4 +20,10 @@
 .stage { max-width: 720px; }
 .stage h1 { font-size: clamp(2rem, 5vw, 3.5rem); letter-spacing: -.04em; }
 .notice { padding: 18px; background: #fffdf8; border: 1px solid var(--line); border-radius: 8px; line-height: 1.6; }
+.presentacion { margin-top: 24px; padding: 20px; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; }
+.presentacion h2 { margin: 0 0 16px; font-size: 1.15rem; }
+.presentacion dl { margin: 0; }
+.presentacion dt { font-size: .85rem; color: var(--muted); }
+.presentacion dd { margin: 4px 0 16px; font-weight: 650; overflow-wrap: anywhere; }
+.presentacion dl > div:last-child dd { margin-bottom: 0; }
 @media (min-width: 900px) { .hero { grid-template-columns: 1.3fr 1fr; gap: 72px; padding-block: 32px; } .dossier { padding: 36px; } }
