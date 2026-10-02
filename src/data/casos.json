@@ -1,5 +1,5 @@
 {
-  "portada": {"src":"img/portada.webp","alt":"Ilustración de lupa, huellas o silueta de detective con libros","autor":"Elaboración propia del grupo, generada con IA","fuente":"Generada con ChatGPT (OpenAI)","url":"","licencia":"CC BY-NC-SA 4.0 (sujeta a los términos de uso de la herramienta)","descripcion":"Portada ilustrativa generada con inteligencia artificial. Fecha de generación: 2026-10-02.","generadaConIA":true},
+  "portada": {"src":"img/portada.webp","alt":"Ilustración de lupa, huellas o silueta de detective con libros","autor":"Elaboración propia del grupo, generada con IA","fuente":"Generada con ChatGPT (OpenAI)","url":"","licencia":"CC BY-NC-SA 4.0 (sujeta a los términos de uso de la herramienta)","descripcion":"Portada ilustrativa generada con inteligencia artificial. Fecha de generación: 02-octubre-2026.","generadaConIA":true},
   "juego": {
     "titulo": "Detectives del Texto: casos de lectura crítica",
     "umbralAprobacion": 70,
@@ -242,7 +242,7 @@
     },
     {
       "id": 3,
-      "imagen": {"src":"img/caso3.webp","alt":"Ilustración propia de un colegio","autor":"Elaboración propia del grupo, generada con IA","fuente":"Generada con ChatGPT (OpenAI)","url":"","licencia":"CC BY-NC-SA 4.0 (sujeta a los términos de uso de la herramienta)","descripcion":"Imagen ilustrativa generada con inteligencia artificial. Fecha de generación: 2026-10-02.","generadaConIA":true},
+      "imagen": {"src":"img/caso3.webp","alt":"Ilustración propia de un colegio","autor":"Elaboración propia del grupo, generada con IA","fuente":"Generada con ChatGPT (OpenAI)","url":"","licencia":"CC BY-NC-SA 4.0 (sujeta a los términos de uso de la herramienta)","descripcion":"Imagen ilustrativa generada con inteligencia artificial. Fecha de generación: 02-octubre-2026.","generadaConIA":true},
       "titulo": "¿Quién miente?",
       "nivel": 3,
       "dificultad": "Media-alta",
