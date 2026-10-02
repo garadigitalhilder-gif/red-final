@@ -13,6 +13,7 @@
         <imsmd:title>
           <imsmd:langstring xml:lang="es">Detectives del Texto: casos de lectura crítica</imsmd:langstring>
         </imsmd:title>
+        <imsmd:description><imsmd:langstring xml:lang="es">Imagen de portada del recurso: img/portada.webp</imsmd:langstring></imsmd:description>
         <imsmd:language>es</imsmd:language>
         <imsmd:description>
           <imsmd:langstring xml:lang="es">Recurso educativo digital de misterio para estudiantes de grado 11 en Colombia. Cuatro casos con textos, preguntas, pistas y rúbricas fortalecen la lectura crítica y la construcción de una postura propia.</imsmd:langstring>
@@ -101,7 +102,7 @@ END:VCARD</imsmd:vcard></imsmd:centity>
           <imsmd:value><imsmd:langstring xml:lang="x-none">yes</imsmd:langstring></imsmd:value>
         </imsmd:copyrightandotherrestrictions>
         <imsmd:description>
-          <imsmd:langstring xml:lang="es">Autoría del grupo [COMPLETAR]. Los textos de los casos indican CC BY-NC-SA 4.0; consulte la licencia de cada contenido en src/data/casos.json. Las dependencias conservan sus licencias originales.</imsmd:langstring>
+          <imsmd:langstring xml:lang="es">Autoría del grupo [COMPLETAR]. Salvo donde se indique, este recurso se publica bajo CC BY-NC-SA 4.0. Las imágenes y los textos conservan la licencia de su fuente original. Las dependencias conservan sus licencias originales.</imsmd:langstring>
         </imsmd:description>
       </imsmd:rights>
     </imsmd:lom>
@@ -118,6 +119,11 @@ END:VCARD</imsmd:vcard></imsmd:centity>
   <resources>
     <resource identifier="RES_DETECTIVES" type="webcontent" adlcp:scormtype="sco" href="index.html">
       <file href="index.html" />
+      <file href="img/portada.webp" />
+      <file href="img/caso1.webp" />
+      <file href="img/caso2.webp" />
+      <file href="img/caso3.webp" />
+      <file href="img/caso4.webp" />
       <!-- ARCHIVOS_GENERADOS -->
     </resource>
   </resources>

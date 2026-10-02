@@ -21,8 +21,16 @@ export default function scormManifestPlugin() {
     configResolved(config) { salida = path.resolve(config.root, config.build.outDir) },
     async writeBundle() {
       const destino = path.join(salida, 'imsmanifest.xml')
-      const plantilla = await readFile(destino, 'utf8')
-      const lista = (await archivos(salida)).filter(nombre => !['index.html', 'imsmanifest.xml'].includes(nombre)).sort()
+      let plantilla = await readFile(destino, 'utf8')
+      const disponibles = await archivos(salida)
+      // La plantilla declara las imágenes previstas; el ZIP solo declara archivos existentes.
+      plantilla = plantilla.replace(/\s*<file href="(img\/[^"&]+\.webp)"\s*\/>/gu, (nodo, nombre) => {
+        if (disponibles.includes(nombre)) return nodo
+        console.warn('Imagen pendiente, omitida del manifiesto generado: ' + nombre)
+        return ''
+      })
+      const yaDeclarados = [...plantilla.matchAll(/<file\s+href="([^"]+)"/gu)].map(m => m[1])
+      const lista = disponibles.filter(nombre => nombre !== 'imsmanifest.xml' && !yaDeclarados.includes(escapar(nombre))).sort()
       const nodos = lista.map(nombre => '<file href="' + escapar(nombre) + '" />').join('\n      ')
       await writeFile(destino, plantilla.replace('<!-- ARCHIVOS_GENERADOS -->', nodos), 'utf8')
     }

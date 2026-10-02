@@ -1,4 +1,5 @@
 {
+  "portada": {"src":"img/portada.webp","alt":"Ilustración de lupa, huellas o silueta de detective con libros","autor":"Elaboración propia del grupo, generada con IA","fuente":"Generada con ChatGPT (OpenAI)","url":"","licencia":"CC BY-NC-SA 4.0 (sujeta a los términos de uso de la herramienta)","descripcion":"Portada ilustrativa generada con inteligencia artificial. Fecha de generación: 2026-10-02.","generadaConIA":true},
   "juego": {
     "titulo": "Detectives del Texto: casos de lectura crítica",
     "umbralAprobacion": 70,
@@ -19,6 +20,7 @@
   "casos": [
     {
       "id": 1,
+      "imagen": {"src":"img/caso1.webp","alt":"Atardecer sobre el río Paraná, con el sol cerca del horizonte y un puente a lo lejos que se refleja en el agua","autor":"6lobalica","fuente":"Wikimedia Commons","url":"https://commons.wikimedia.org/wiki/File:Parana-at-sunset.jpg","licencia":"CC BY-SA 4.0","descripcion":"«Parana at sunset» (4 de agosto de 2016). Imagen ilustrativa del río Paraná. Recortada y convertida a WebP.","generadaConIA":false},
       "titulo": "El rastro de las ideas",
       "nivel": 1,
       "dificultad": "Básica-media",
@@ -131,6 +133,7 @@
     },
     {
       "id": 2,
+      "imagen": {"src":"img/caso2.webp","alt":"Retrato en blanco y negro de José Martí: hombre de bigote, con traje oscuro, camisa blanca y corbatín","autor":"Foto de Juan Bautista Valdés (Kingston, Jamaica, 1892). Publicada por Cuba, Secretaría de Instrucción Pública y Bellas Artes","fuente":"Wikimedia Commons","url":"https://commons.wikimedia.org/wiki/File:José_Martí_retrato_más_conocido_Jamaica_1892.jpg","licencia":"CC0 (dedicación al dominio público)","descripcion":"Retrato más conocido de José Martí, 1892. Convertida a WebP.","generadaConIA":false},
       "titulo": "El sospechoso oculto",
       "nivel": 2,
       "dificultad": "Media",
@@ -239,6 +242,7 @@
     },
     {
       "id": 3,
+      "imagen": {"src":"img/caso3.webp","alt":"Ilustración propia de un colegio","autor":"Elaboración propia del grupo, generada con IA","fuente":"Generada con ChatGPT (OpenAI)","url":"","licencia":"CC BY-NC-SA 4.0 (sujeta a los términos de uso de la herramienta)","descripcion":"Imagen ilustrativa generada con inteligencia artificial. Fecha de generación: 2026-10-02.","generadaConIA":true},
       "titulo": "¿Quién miente?",
       "nivel": 3,
       "dificultad": "Media-alta",
@@ -343,6 +347,7 @@
     },
     {
       "id": 4,
+      "imagen": {"src":"img/caso4.webp","alt":"Retrato pintado de Simón Bolívar, con uniforme militar rojo y azul con charreteras doradas y una medalla al cuello, con el brazo cruzado","autor":"Luis Enrique Toro Moreno (1897-1933)","fuente":"Wikimedia Commons","url":"https://commons.wikimedia.org/wiki/File:Simón_Bolívar._Toro_Moreno,_Luis._1922,_Legislative_Palace,_La_Paz.png","licencia":"Dominio público","descripcion":"Retrato de Simón Bolívar (1922), Palacio Legislativo de La Paz. Recortada y convertida a WebP.","generadaConIA":false},
       "titulo": "El veredicto final",
       "nivel": 4,
       "dificultad": "Alta",

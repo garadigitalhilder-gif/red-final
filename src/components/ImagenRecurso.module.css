@@ -1,0 +1,9 @@
+.figura { margin: 24px 0; max-width: 800px; }
+.figura img, .marcador { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; border-radius: 8px; object-fit: cover; object-position: center 25%; background: var(--surface); }
+.marcador { display: flex; align-items: center; justify-content: center; gap: 12px; border: 1px dashed var(--muted); color: var(--ink); }
+.marcador span { font-size: 2rem; }
+.marcador { padding: 16px; box-sizing: border-box; }
+.marcador p { margin: 8px 0 0; }
+.figura figcaption { margin-top: 10px; font-size: .875rem; line-height: 1.6; overflow-wrap: anywhere; }
+.figura figcaption p { margin: 4px 0; }
+.miniatura { max-width: 320px; }

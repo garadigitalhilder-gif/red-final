@@ -1,3 +1,4 @@
+import ImagenRecurso from '../components/ImagenRecurso.jsx'
 import { Link, useParams } from 'react-router-dom'
 import { useEffect } from 'react'
 import datos from '../data/interfaz.json'
@@ -28,7 +29,7 @@ export default function Caso({ juego }) {
   return <div className={styles.caso}>
     <header><p className={styles.etiqueta}>{datos.juego.durante} · {datos.juego.nivel} {caso.nivel} · {caso.dificultad}</p><h1>{caso.titulo}</h1>
       {caso.introduccion && <p className={styles.objetivo}>{caso.introduccion}</p>}
-      <p className={styles.objetivo}>{caso.objetivo}</p></header>
+      <p className={styles.objetivo}>{caso.objetivo}</p><ImagenRecurso key={caso.id} imagen={caso.imagen} titulo={caso.titulo} /></header>
     {!juego.almacenamientoDisponible && <p role="status">{datos.juego.sinGuardado}</p>}
     <Marcador puntos={juego.puntos} maximo={juego.maximo} />
     <div className={styles.investigacion}>

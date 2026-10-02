@@ -12,7 +12,7 @@ export function adaptarDatos(entrada = fuente) {
       ...Object.values(interfaz.componentes.insignias)[index], casoRequerido: caso.id
     })
   } : entrada.juego
-  return { juego: configuracion,
+  return { juego: configuracion, portada: entrada.portada,
     casos: casos.map(caso => ({ ...caso, glosario: caso.glosario ?? [],
       preguntas: caso.preguntas.map(p => ({ ...p, puntos: p.puntos ?? configuracion.puntosPorPregunta })) })),
     creditos: legado ? casos.map(c => ({ caso: c.id, autor: c.texto?.autor, obra: c.texto?.titulo,

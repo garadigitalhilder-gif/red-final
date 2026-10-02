@@ -105,7 +105,7 @@ export default function useJuego(entrada = datos, servicio = scormService) {
   return { ...estado, pistasUsadas: Object.keys(estado.pistas), puntos, puntaje: puntos, maximo,
     caso: catalogo.find(c => c.id === estado.casoActual), catalogo, resumenes, casosCompletados, insigniasGanadas,
     juegoTotal: preguntas.length, juegoCompletadas: Object.keys(estado.respuestas).length,
-    configuracion, creditos: contenido.creditos, costoPista: COSTO_PISTA,
+    configuracion, portada: contenido.portada, creditos: contenido.creditos, costoPista: COSTO_PISTA,
     regla: interfaz.juego.regla.replace('{umbral}', configuracion.umbralAprobacion),
     meta: interfaz.juego.aprobado.replace('{umbral}', configuracion.umbralAprobacion),
     metaPendiente: interfaz.juego.noAprobado.replace('{umbral}', configuracion.umbralAprobacion),

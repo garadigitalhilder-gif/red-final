@@ -33,6 +33,11 @@ for (const nombre of declarados) assert.ok(entradas[nombre], 'Archivo declarado 
 for (const nombre of Object.keys(entradas)) {
   if (nombre !== 'imsmanifest.xml') assert.ok(declarados.includes(nombre), 'Archivo no declarado: ' + nombre)
 }
+const imagenes = ['portada', 'caso1', 'caso2', 'caso3', 'caso4'].map(nombre => `img/${nombre}.webp`)
+for (const ruta of imagenes) {
+  assert.ok(entradas[ruta]?.length, 'Imagen requerida ausente o vacía en dist: ' + ruta)
+  assert.ok(declarados.includes(ruta), 'Imagen no declarada: ' + ruta)
+}
 
 const carpeta = path.join(raiz, 'paquetes')
 const destino = path.join(carpeta, 'detectives-del-texto-scorm12.zip')
@@ -43,6 +48,10 @@ await writeFile(destino, zip)
 const comprobacion = unzipSync(new Uint8Array(await readFile(destino)))
 assert.deepEqual(Object.keys(comprobacion).sort(), Object.keys(entradas).sort())
 for (const nombre of Object.keys(entradas)) assert.deepEqual(comprobacion[nombre], entradas[nombre])
+assert.ok(Object.keys(comprobacion).some(nombre => nombre.startsWith('img/')), 'Falta la carpeta img/ del paquete.')
+for (const ruta of imagenes) assert.ok(comprobacion[ruta]?.length, 'Imagen ausente del ZIP: ' + ruta)
 console.log('ZIP SCORM 1.2 generado y comprobado: ' + destino)
 console.log(`${Object.keys(entradas).length} archivos; index.html e imsmanifest.xml en la raíz; ${(zip.length / 1024).toFixed(1)} KiB.`)
 if (manifest.includes('[COMPLETAR]')) console.log('Metadatos pendientes: sustituye [COMPLETAR] con los nombres del grupo y vuelve a generar el ZIP.')
+console.log('Contenido del ZIP:')
+for (const nombre of Object.keys(comprobacion).sort()) console.log(`  ${nombre} (${(comprobacion[nombre].length / 1024).toFixed(2)} KB)`)
